@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T17:57:16+01:00",
+  "updatedAt": "2026-11-21T18:05:22+01:00",
   "subs": {
     "total": 5,
     "tier1": 5,
@@ -79,21 +79,9 @@
     ]
   },
   "followers": {
-    "total": 399,
+    "total": 397,
     "lastWeek": 7,
     "top": [
-      {
-        "login": "jwacolfnbfzy",
-        "name": "jwacolfnbfzy",
-        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/41780b5a-def8-11e9-94d9-784f43822e80-profile_image-300x300.png",
-        "value": 1468462409
-      },
-      {
-        "login": "vyqujgeshacu",
-        "name": "vyqujgeshacu",
-        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/de130ab0-def7-11e9-b668-784f43822e80-profile_image-300x300.png",
-        "value": 1473847809
-      },
       {
         "login": "vollkrasses",
         "name": "vollkrasses",
@@ -141,6 +129,18 @@
         "name": "Peterus_Rusus",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/ea1c7531eda1af62-profile_image-300x300.png",
         "value": 1507554371
+      },
+      {
+        "login": "toast_brot1",
+        "name": "toast_brot1",
+        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/cdd517fe-def4-11e9-948e-784f43822e80-profile_image-300x300.png",
+        "value": 1511659034
+      },
+      {
+        "login": "mandy_on_tour",
+        "name": "Mandy_on_Tour",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e2a6afb6-aa80-4903-a150-b45f374444c3-profile_image-300x300.png",
+        "value": 1511659111
       }
     ]
   }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T17:18:14+01:00",
+  "updatedAt": "2026-11-21T17:57:16+01:00",
   "subs": {
     "total": 5,
     "tier1": 5,
@@ -79,7 +79,7 @@
     ]
   },
   "followers": {
-    "total": 402,
+    "total": 399,
     "lastWeek": 7,
     "top": [
       {
@@ -87,18 +87,6 @@
         "name": "jwacolfnbfzy",
         "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/41780b5a-def8-11e9-94d9-784f43822e80-profile_image-300x300.png",
         "value": 1468462409
-      },
-      {
-        "login": "zhkwbmnnvziw",
-        "name": "zhkwbmnnvziw",
-        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/ebb84563-db81-4b9c-8940-64ed33ccfc7b-profile_image-300x300.png",
-        "value": 1469454405
-      },
-      {
-        "login": "jkupqrtgawno",
-        "name": "jkupqrtgawno",
-        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/294c98b5-e34d-42cd-a8f0-140b72fba9b0-profile_image-300x300.png",
-        "value": 1469748523
       },
       {
         "login": "vyqujgeshacu",
@@ -141,6 +129,18 @@
         "name": "Thriller2000",
         "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/75305d54-c7cc-40d1-bb9c-91fbe85943c7-profile_image-300x300.png",
         "value": 1505145509
+      },
+      {
+        "login": "schlaraffenland",
+        "name": "Schlaraffenland",
+        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/998f01ae-def8-11e9-b95c-784f43822e80-profile_image-300x300.png",
+        "value": 1505568920
+      },
+      {
+        "login": "peterus_rusus",
+        "name": "Peterus_Rusus",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/ea1c7531eda1af62-profile_image-300x300.png",
+        "value": 1507554371
       }
     ]
   }

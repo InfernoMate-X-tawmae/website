@@ -1,18 +1,10 @@
 {
-  "updatedAt": "2026-11-21T17:09:40+01:00",
+  "updatedAt": "2026-11-21T17:18:14+01:00",
   "pointsName": "GAMBA Coins",
   "leaderboards": {
     "current": [
       {
         "rank": 1,
-        "userId": "735647318",
-        "login": "r0astytv",
-        "name": "r0astytv",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6fcc8c5d-7dcc-495c-aec2-d0b2cc3e1a53-profile_image-300x300.png",
-        "points": 10000680
-      },
-      {
-        "rank": 2,
         "userId": "107655116",
         "login": "vollkrasses",
         "name": "vollkrasses",
@@ -20,7 +12,7 @@
         "points": 822262
       },
       {
-        "rank": 3,
+        "rank": 2,
         "userId": "138663207",
         "login": "lenamelody",
         "name": "LenaMelody",
@@ -28,7 +20,7 @@
         "points": 754983
       },
       {
-        "rank": 4,
+        "rank": 3,
         "userId": "1457949106",
         "login": "homestaterp_streamertool",
         "name": "HomeStateRP_Streamertool",
@@ -36,7 +28,7 @@
         "points": 753985
       },
       {
-        "rank": 5,
+        "rank": 4,
         "userId": "509514463",
         "login": "red_deevil",
         "name": "red_deevil",
@@ -44,7 +36,7 @@
         "points": 470044
       },
       {
-        "rank": 6,
+        "rank": 5,
         "userId": "133617601",
         "login": "lynox97",
         "name": "Lynox97",
@@ -52,7 +44,7 @@
         "points": 233560
       },
       {
-        "rank": 7,
+        "rank": 6,
         "userId": "107593259",
         "login": "headman_666",
         "name": "headman_666",
@@ -60,7 +52,7 @@
         "points": 229470
       },
       {
-        "rank": 8,
+        "rank": 7,
         "userId": "1058215643",
         "login": "pierreliusmaximus",
         "name": "PierreliusMaximus",
@@ -68,7 +60,7 @@
         "points": 226243
       },
       {
-        "rank": 9,
+        "rank": 8,
         "userId": "167643924",
         "login": "phoebe_coma",
         "name": "phoebe_coma",
@@ -76,12 +68,20 @@
         "points": 204470
       },
       {
-        "rank": 10,
+        "rank": 9,
         "userId": "117861313",
         "login": "schlenki",
         "name": "Schlenki",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/1c96c6da-3133-4bdb-9b11-5727ffbb81ff-profile_image-300x300.png",
         "points": 176940
+      },
+      {
+        "rank": 10,
+        "userId": "275625182",
+        "login": "fabyshi",
+        "name": "FabYshi",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/19d61adf-bbef-45f1-9c4c-a4f44056171b-profile_image-300x300.png",
+        "points": 160015
       }
     ],
     "week": [

@@ -1,0 +1,136 @@
+---
+import MiniBoard from './MiniBoard.astro';
+import { fmt, fmtCompact, fmtNet, pct } from '../lib/format';
+import type { GamesData, TopRow } from '../data/types';
+
+interface Props {
+  games: GamesData;
+  pointsName: string;
+}
+
+const { games, pointsName: p } = Astro.props;
+const { gamble, duels, rumble, scratchCards: scratch } = games;
+const avg = (a: number, b: number, digits = 0) =>
+  new Intl.NumberFormat('de-DE', { maximumFractionDigits: digits }).format(b > 0 ? a / b : 0);
+
+const panels: {
+  name: string;
+  command: string;
+  count: number;
+  countLabel: string;
+  split?: { left: string; right: string; leftPct: number };
+  rows: [string, string][];
+  topLabel: string;
+  top: TopRow[];
+  topValue: (v: number) => string;
+}[] = [
+  {
+    name: 'Gamble',
+    command: '!gamble',
+    count: gamble.plays,
+    countLabel: 'Runden',
+    split: { left: 'gewonnen', right: 'verloren', leftPct: pct(gamble.wins, gamble.plays) },
+    rows: [
+      ['Davon All-in', fmt(gamble.allIns)],
+      [`Gewonnene ${p}`, fmtCompact(gamble.pointsWon)],
+      [`Verlorene ${p}`, fmtCompact(gamble.pointsLost)],
+    ],
+    topLabel: 'Top-Verdiener',
+    top: gamble.top,
+    topValue: fmtNet,
+  },
+  {
+    name: 'Duelle',
+    command: '!duel',
+    count: duels.played,
+    countLabel: 'Duelle',
+    rows: [
+      ['Unentschieden', fmt(duels.tied)],
+      [`Um ${p} gespielt`, fmtCompact(duels.pointsDuelledFor)],
+      ['Durchschnittlicher Einsatz', fmt(Math.round(duels.pointsDuelledFor / Math.max(1, duels.played)))],
+    ],
+    topLabel: 'Meiste Siege',
+    top: duels.top,
+    topValue: (v) => `${fmt(v)} Siege`,
+  },
+  {
+    name: 'Rumble',
+    command: '!rumble',
+    count: rumble.rounds,
+    countLabel: 'Runden',
+    rows: [
+      ['Teilnahmen', fmt(rumble.entries)],
+      ['Leute pro Runde', avg(rumble.entries, rumble.rounds, 1)],
+      [`Ausgezahlte ${p}`, fmtCompact(rumble.pointsWon)],
+    ],
+    topLabel: 'Meiste Siege',
+    top: rumble.top,
+    topValue: (v) => `${fmt(v)} Siege`,
+  },
+  {
+    name: 'Scratchcards',
+    command: '!scratchCard',
+    count: scratch.sold,
+    countLabel: 'verkauft',
+    split: { left: 'Gewinn', right: 'Niete', leftPct: pct(scratch.wins, scratch.sold) },
+    rows: [
+      ['Jackpot gerade', `${fmt(scratch.jackpot)} ${p}`],
+      ['Kein Gewinn seit so vielen Losen', fmt(scratch.ticketsSinceWin)],
+      [`Ausgezahlte ${p}`, fmtCompact(scratch.pointsWon)],
+    ],
+    topLabel: `Meiste ${p} gewonnen`,
+    top: scratch.top,
+    topValue: (v) => fmt(v),
+  },
+];
+---
+
+<section class="mx-auto max-w-[76rem] px-4 py-20 sm:px-6 sm:py-28" aria-labelledby="chat-spiele">
+  <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
+    <h2 id="chat-spiele" class="display text-6xl sm:text-7xl">Chat-Spiele</h2>
+    <p class="text-white/60">LOYALTY POINTS Chat Games</p>
+  </div>
+
+  <div class="mt-10 grid border-t border-white/15 lg:grid-cols-2">
+    {panels.map((g, i) => (
+      <article class:list={['flex flex-col border-white/10 py-9 lg:row-span-2 lg:grid lg:grid-rows-subgrid', i > 0 && 'border-t', i === 1 && 'lg:border-t-0', i % 2 === 0 ? 'lg:border-r lg:pr-12' : 'lg:pl-12']}>
+        <div>
+        <div class="flex items-baseline justify-between gap-4">
+          <h3 class="display text-5xl">{g.name}</h3>
+          <code class="font-mono text-xs text-white/55">{g.command}</code>
+        </div>
+
+        <p class="mt-5 flex items-baseline gap-2.5">
+          <span class="display num text-7xl">{fmt(g.count)}</span>
+          <span class="text-white/55">{g.countLabel}</span>
+        </p>
+
+        {g.split && (
+          <div class="mt-5">
+            <div class="flex h-2.5 overflow-hidden rounded-[2px] bg-white/10" role="img" aria-label={`${g.split.leftPct} % ${g.split.left}, ${100 - g.split.leftPct} % ${g.split.right}`}>
+              <span class="block h-full bg-ember" style={`width:${g.split.leftPct}%`}></span>
+            </div>
+            <p class="mt-1.5 flex justify-between text-sm">
+              <span><span class="font-bold">{g.split.leftPct} %</span> <span class="text-white/55">{g.split.left}</span></span>
+              <span><span class="font-bold">{100 - g.split.leftPct} %</span> <span class="text-white/55">{g.split.right}</span></span>
+            </p>
+          </div>
+        )}
+
+        <dl class="mt-5 text-sm">
+          {g.rows.map(([label, value]) => (
+            <div class="flex justify-between gap-4 border-t border-white/[0.08] py-2">
+              <dt class="text-white/55">{label}</dt>
+              <dd class="num text-right font-semibold">{value}</dd>
+            </div>
+          ))}
+        </dl>
+        </div>
+
+        <div class="pt-6">
+          <MiniBoard id={`top-${g.command.slice(1).toLowerCase()}`} label={g.topLabel} rows={g.top} value={g.topValue} />
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

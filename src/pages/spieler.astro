@@ -1,0 +1,197 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PlayerSearch from '../components/PlayerSearch.astro';
+import { loadData } from '../lib/data';
+import { fmt, fmtStamp, url } from '../lib/format';
+import type { LoyaltyData, PlayerIndexEntry } from '../data/types';
+
+const loyalty = await loadData<LoyaltyData>('loyalty.json');
+const { players } = await loadData<{ players: PlayerIndexEntry[] }>('players/index.json');
+const top = players.filter((p) => p.rank !== null).sort((a, b) => a.rank! - b.rank!).slice(0, 10);
+---
+
+<Base title="Spieler · InfernoMate" description="Kontostand, Chat-Spiele und Casino-Statistiken für jeden aus dem Chat von InfernoMate.">
+  <Header />
+  <main class="mx-auto max-w-[76rem] px-4 pb-24 pt-10 sm:px-6 sm:pt-16">
+    <div class="reveal grid items-end gap-6 border-b border-white/15 pb-10 lg:grid-cols-12 lg:gap-12">
+      <div class="lg:col-span-5">
+        <h1 class="display text-7xl sm:text-8xl">Spieler</h1>
+        <p class="mt-3 text-white/60">Stand {fmtStamp(loyalty.updatedAt)}</p>
+      </div>
+      <PlayerSearch id="player-search" mode="event" tone="raised" class="lg:col-span-7" />
+    </div>
+
+    <div id="profile" data-points-name={loyalty.pointsName} aria-live="polite"></div>
+
+    <section id="start" class="reveal mt-12" style="--i:1" aria-labelledby="top-heading">
+      <h2 id="top-heading" class="text-sm font-semibold text-white/55">Oder einfach reinschauen: die Top 10</h2>
+      <ol class="mt-3 grid border-t border-white/15 sm:grid-cols-2 sm:gap-x-12">
+        {top.map((p) => (
+          <li>
+            <a href={url(`spieler/?name=${encodeURIComponent(p.login)}`)} class="group grid grid-cols-[2.5rem_2.25rem_minmax(0,1fr)_auto] items-center gap-x-3 border-b border-white/10 py-2.5">
+              <span class="display num text-2xl text-white/40">{p.rank}</span>
+              {p.avatar ? <img src={p.avatar} alt="" width="36" height="36" loading="lazy" class="size-9 rounded-full object-cover" /> : <span class="size-9 rounded-full bg-white/10"></span>}
+              <span class="truncate font-semibold transition-colors group-hover:text-ember-light">{p.name}</span>
+              <span class="num font-bold">{fmt(p.points)}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+  </main>
+  <Footer />
+</Base>
+
+<script>
+  import { avatar, esc, fmt, loadIndex, loadPlayer, playerUrl } from '../scripts/players';
+  import type { PlayerIndexEntry, PlayerStats } from '../data/types';
+
+  const root = document.getElementById('profile')!;
+  const start = document.getElementById('start')!;
+  const P = root.dataset.pointsName ?? 'Punkte';
+  const RED = new Set([1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]);
+
+  const pctOf = (a: number, b: number) => (b > 0 ? Math.round((a / b) * 100) : 0);
+  const net = (n: number) =>
+    n > 0
+      ? `<span class="text-ember-light">+${fmt(n)}</span>`
+      : n < 0
+        ? `<span class="text-white/60">−${fmt(-n)}</span>`
+        : '0';
+  const rows = (items: [string, string][]) =>
+    `<dl class="mt-4 text-sm">${items
+      .map(([k, v]) => `<div class="flex justify-between gap-4 border-t border-white/[0.08] py-2"><dt class="text-white/55">${k}</dt><dd class="num text-right font-semibold">${v}</dd></div>`)
+      .join('')}</dl>`;
+  const column = (name: string, count: number, label: string, items: [string, string][], i: number, cols: number) => `
+    <article class="border-white/10 py-7 ${i > 0 ? 'border-t' : ''} ${i < cols ? 'lg:border-t-0' : ''} ${i % cols !== cols - 1 ? 'lg:border-r lg:pr-8' : ''} ${i % cols !== 0 ? 'lg:pl-8' : ''}">
+      <h4 class="display text-3xl">${name}</h4>
+      <p class="mt-3 flex items-baseline gap-2"><span class="display num text-5xl">${fmt(count)}</span><span class="text-sm text-white/55">${label}</span></p>
+      ${rows(items)}
+    </article>`;
+  const empty = (name: string, i: number, cols: number) => `
+    <article class="border-white/10 py-7 ${i > 0 ? 'border-t' : ''} ${i < cols ? 'lg:border-t-0' : ''} ${i % cols !== cols - 1 ? 'lg:border-r lg:pr-8' : ''} ${i % cols !== 0 ? 'lg:pl-8' : ''}">
+      <h4 class="display text-3xl text-white/45">${name}</h4>
+      <p class="mt-3 text-sm text-white/45">Noch nicht gespielt.</p>
+    </article>`;
+  const pocket = (n: number) =>
+    `<span class="num ml-1.5 inline-flex size-6 items-center justify-center rounded-[3px] text-xs font-bold text-white ${n === 0 ? 'bg-roulette-green' : RED.has(n) ? 'bg-roulette-red' : 'bg-roulette-black ring-1 ring-inset ring-white/20'}">${n}</span>`;
+  const ranged = (x: { earned: number; rank: number } | null) =>
+    x ? `${fmt(x.earned)} <span class="font-normal text-white/50">(Platz ${fmt(x.rank)})</span>` : '<span class="font-normal text-white/50">nicht in den Top 100</span>';
+
+  function render(p: PlayerStats) {
+    const earnedTotal = p.earned.watchtime + p.earned.chat + p.earned.bonus;
+    const sources = [
+      { label: 'Watchtime', value: p.earned.watchtime, cls: 'bg-ember' },
+      { label: 'Chat', value: p.earned.chat, cls: 'bg-paper/80' },
+      { label: 'Bonus-Events', value: p.earned.bonus, cls: 'bg-white/30' },
+    ];
+    const g = p.gamble, d = p.duels, r = p.rumble, s = p.scratchCards;
+
+    const chatGames = [
+      g.plays ? column('Gamble', g.plays, 'Runden', [['Gewonnen', `${pctOf(g.wins, g.plays)} %`], ['Davon All-in', fmt(g.allIns)], ['Netto', net(g.pointsWon - g.pointsLost)], ['Höchster Gewinn', fmt(g.highestWin)]], 0, 4) : empty('Gamble', 0, 4),
+      d.played ? column('Duelle', d.played, 'Duelle', [['Siege', fmt(d.won)], ['Niederlagen', fmt(d.lost)], ['Unentschieden', fmt(d.tied)], ['Netto', net(d.pointsWon - d.pointsLost)]], 1, 4) : empty('Duelle', 1, 4),
+      r.entries ? column('Rumble', r.entries, 'Teilnahmen', [['Siege', fmt(r.wins)], ['Gewinnquote', `${pctOf(r.wins, r.entries)} %`], ['Netto', net(r.pointsWon - r.pointsLost)]], 2, 4) : empty('Rumble', 2, 4),
+      s.bought ? column('Scratchcards', s.bought, 'gekauft', [['Gewinne', fmt(s.wins)], ['Netto', net(s.pointsWon - s.pointsLost)], ['Höchster Gewinn', fmt(s.highestWin)]], 3, 4) : empty('Scratchcards', 3, 4),
+    ].join('');
+
+    const ro = p.roulette, bj = p.blackjack, po = p.poker;
+    const casino = [
+      ro ? column('Roulette', ro.rounds, 'Runden', [['Treffer', `${pctOf(ro.hits, ro.rounds)} %`], ['Netto', net(ro.paidOut - ro.wagered)], ['Bester Gewinn', ro.bestNumber >= 0 ? `${fmt(ro.best)} auf ${pocket(ro.bestNumber)}` : '–']], 0, 3) : empty('Roulette', 0, 3),
+      bj ? column('Blackjack', bj.hands, 'Hände', [['Gewonnen', `${pctOf(bj.wins, bj.hands)} %`], ['Blackjacks', fmt(bj.blackjacks)], ['Netto', net(bj.paidOut - bj.wagered)], ['Bester Gewinn', fmt(bj.best)]], 1, 3) : empty('Blackjack', 1, 3),
+      po ? column('Poker', po.hands, 'Hände', [['Gewonnen', `${pctOf(po.wins, po.hands)} %`], ['Bestes Blatt', po.bestHand ? esc(po.bestHand) : '–'], ['Netto', net(po.paidOut - po.wagered)], ['Bester Gewinn', fmt(po.best)]], 2, 3) : empty('Poker', 2, 3),
+    ].join('');
+
+    const tw = p.twitch;
+    const day = (iso: string) => new Intl.DateTimeFormat('de-DE', { dateStyle: 'medium', timeZone: 'Europe/Berlin' }).format(new Date(iso));
+    const twitch = tw
+      ? [
+          column('Sub', tw.subMonths, tw.subMonths === 1 ? 'Monat' : 'Monate', [['Gerade', tw.subTier ? `Tier ${tw.subTier}` : 'kein Sub']], 0, 4),
+          column('Gifted Subs', tw.giftedSubs, 'verschenkt', [], 1, 4),
+          column('Bits', tw.bits ?? 0, 'Bits', [['Bits-Rangliste', tw.bits === null ? 'nicht in den Top 100' : 'Top 100']], 2, 4),
+          tw.followedAt
+            ? column('Follow', Math.max(0, Math.floor((Date.now() - Date.parse(tw.followedAt)) / 86400000)), 'Tage', [['Folgt seit', day(tw.followedAt)]], 3, 4)
+            : column('Follow', 0, 'Tage', [['Folgt seit', 'folgt nicht']], 3, 4),
+        ].join('')
+      : '';
+
+    root.innerHTML = `
+      <section class="reveal mt-12 grid gap-10 border-b border-white/15 pb-12 lg:grid-cols-12 lg:gap-12" aria-labelledby="player-name">
+        <div class="flex items-center gap-5 sm:gap-7 lg:col-span-7">
+          ${avatar(p, 'size-24 shrink-0 ring-[3px] ring-ember sm:size-32 text-4xl')}
+          <div class="min-w-0">
+            <h2 id="player-name" class="display truncate text-6xl sm:text-8xl">${esc(p.name)}</h2>
+            <p class="mt-2 text-white/60">${p.platform === 'youtube' ? 'YouTube' : 'Twitch'} · ${p.rank ? `Platz ${fmt(p.rank)}` : 'Nicht in den Top 100'}</p>
+          </div>
+        </div>
+        <div class="lg:col-span-5 lg:border-l lg:border-white/10 lg:pl-12">
+          <p class="text-sm text-white/55">Kontostand</p>
+          <p class="mt-1 flex items-baseline gap-2.5"><span class="display num text-7xl">${fmt(p.points)}</span><span class="text-white/55">${esc(P)}</span></p>
+          ${rows([
+            ['Diese Woche verdient', ranged(p.week)],
+            ['Diesen Monat verdient', ranged(p.month)],
+          ])}
+        </div>
+      </section>
+
+      <section class="reveal mt-14" style="--i:1" aria-labelledby="sources">
+        <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-2">
+          <h3 id="sources" class="display text-5xl">Woher die ${esc(P)} kommen</h3>
+          <p class="text-white/60">Insgesamt verdient: <span class="num font-bold text-paper">${fmt(earnedTotal)}</span></p>
+        </div>
+        <div class="mt-6 flex h-4 overflow-hidden rounded-[2px]" role="img" aria-label="${sources.map((x) => `${x.label} ${pctOf(x.value, earnedTotal)} %`).join(', ')}">
+          ${sources.map((x) => `<span class="${x.cls} block h-full" style="width:${pctOf(x.value, earnedTotal)}%"></span>`).join('')}
+        </div>
+        <ul class="mt-4 grid gap-x-10 gap-y-2 text-sm sm:grid-cols-3">
+          ${sources.map((x) => `<li class="flex items-center gap-2.5"><span class="${x.cls} size-3 shrink-0 rounded-[2px]"></span><span class="text-white/60">${x.label}</span><span class="num ml-auto font-semibold">${fmt(x.value)}</span></li>`).join('')}
+        </ul>
+        <p class="mt-5 text-sm text-white/55">Verschenkt <span class="num font-semibold text-paper">${fmt(p.transfers.sent)}</span>, geschenkt bekommen <span class="num font-semibold text-paper">${fmt(p.transfers.received)}</span>.</p>
+      </section>
+
+      <section class="reveal mt-16" style="--i:2" aria-labelledby="p-games">
+        <h3 id="p-games" class="display text-5xl">Chat-Spiele</h3>
+        <div class="mt-6 grid border-t border-white/15 sm:grid-cols-2 lg:grid-cols-4">${chatGames}</div>
+      </section>
+
+      <section class="reveal mt-12" style="--i:3" aria-labelledby="p-casino">
+        <h3 id="p-casino" class="display text-5xl">Casino</h3>
+        <div class="mt-6 grid border-t border-white/15 lg:grid-cols-3">${casino}</div>
+      </section>
+      ${twitch ? `
+      <section class="reveal mt-12" style="--i:4" aria-labelledby="p-twitch">
+        <h3 id="p-twitch" class="display text-5xl">Twitch</h3>
+        <div class="mt-6 grid border-t border-white/15 sm:grid-cols-2 lg:grid-cols-4">${twitch}</div>
+      </section>` : ''}`;
+    document.title = `${p.name} · InfernoMate`;
+    start.hidden = true;
+  }
+
+  function notFound(name: string) {
+    root.innerHTML = `<p class="mt-12 text-lg text-white/70">Zu „${esc(name)}“ gibt es keine Daten. Entweder noch keine ${esc(P)} gesammelt oder anders geschrieben.</p>`;
+    start.hidden = false;
+  }
+
+  async function show(name: string | null) {
+    if (!name) {
+      root.innerHTML = '';
+      start.hidden = false;
+      document.title = 'Spieler · InfernoMate';
+      return;
+    }
+    const index = await loadIndex();
+    const q = name.toLowerCase();
+    const hit = index.find((x) => x.login === q || x.name.toLowerCase() === q);
+    const player = hit ? await loadPlayer(hit.login) : null;
+    if (player) render(player);
+    else notFound(name);
+  }
+
+  document.addEventListener('player-pick', (e) => {
+    const p = (e as CustomEvent<PlayerIndexEntry>).detail;
+    history.pushState(null, '', playerUrl(p.login));
+    void show(p.login);
+  });
+  addEventListener('popstate', () => void show(new URLSearchParams(location.search).get('name')));
+  void show(new URLSearchParams(location.search).get('name'));
+</script>

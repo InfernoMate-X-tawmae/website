@@ -1,0 +1,21 @@
+---
+interface Props {
+  rank: string;
+  suit: '♠' | '♥' | '♦' | '♣';
+  class?: string;
+}
+
+const { rank, suit, class: className } = Astro.props;
+const red = suit === '♥' || suit === '♦';
+---
+
+<span
+  class:list={[
+    'flex h-14 w-10 shrink-0 flex-col rounded-[4px] bg-paper px-1 pt-1 text-[0.8rem] font-extrabold leading-none shadow-[-3px_0_6px_rgba(0,0,0,0.35)] ring-1 ring-black/20',
+    red ? 'text-roulette-red' : 'text-roulette-black',
+    className,
+  ]}
+>
+  <span>{rank}</span>
+  <span class="mt-0.5">{suit}</span>
+</span>

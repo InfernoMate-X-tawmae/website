@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import "@fontsource-variable/montserrat";
+
+@font-face {
+  font-family: "Tanker";
+  src: url("../assets/fonts/tanker-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Tanker", Impact, "Arial Narrow", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --color-ember: #d84613;
+  --color-ember-light: #ec5a26;
+  --color-ground: #1f1f1f;
+  --color-raised: #272625;
+  --color-paper: #f3f0ec;
+  --color-roulette-red: #c1121f;
+  --color-roulette-black: #141419;
+  --color-roulette-green: #1e7a46;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-ground font-sans text-paper antialiased;
+  }
+  ::selection {
+    background: var(--color-ember);
+    color: #fff;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ember-light);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 0.85;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  .reveal {
+    animation: reveal 0.7s var(--ease-out-quart) both;
+    animation-delay: calc(var(--i, 0) * 80ms);
+  }
+  .bar {
+    transform-origin: left;
+    animation: grow 0.9s var(--ease-out-quart) both;
+    animation-delay: calc(var(--i, 0) * 40ms + 150ms);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .bar {
+    animation: none;
+  }
+}

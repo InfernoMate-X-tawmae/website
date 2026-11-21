@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import flame from '../assets/brand/flame.webp';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'InfernoMate',
+  description = 'InfernoMate: Streamer, Creator, Community. Ranglisten und Statistiken aus dem Stream.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1f1f1f" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/webp" href={flame.src} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="min-h-dvh">
+    <slot />
+  </body>
+</html>

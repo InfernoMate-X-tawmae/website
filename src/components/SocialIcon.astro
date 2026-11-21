@@ -1,0 +1,21 @@
+---
+import Twitch from '~icons/simple-icons/twitch';
+import YouTube from '~icons/simple-icons/youtube';
+import TikTok from '~icons/simple-icons/tiktok';
+import Instagram from '~icons/simple-icons/instagram';
+import X from '~icons/simple-icons/x';
+import Discord from '~icons/simple-icons/discord';
+import KoFi from '~icons/simple-icons/kofi';
+import type { SocialId } from '../data/site';
+
+interface Props {
+  id: SocialId;
+  class?: string;
+}
+
+const icons = { twitch: Twitch, youtube: YouTube, tiktok: TikTok, instagram: Instagram, x: X, discord: Discord, kofi: KoFi };
+const { id, class: className = 'size-4' } = Astro.props;
+const Icon = icons[id];
+---
+
+<Icon class={className} aria-hidden="true" />

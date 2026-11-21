@@ -1,0 +1,32 @@
+---
+import flame from '../assets/brand/flame.webp';
+import ArrowUpRight from '~icons/lucide/arrow-up-right';
+import { site } from '../data/site';
+import { url } from '../lib/format';
+
+const nav = [
+  { label: 'Rangliste', href: url('#rangliste') },
+  { label: 'Spieler', href: url('spieler/') },
+  { label: 'Casino', href: url('#casino') },
+  { label: 'Chat-Spiele', href: url('#chat-spiele') },
+  { label: 'Twitch', href: url('#twitch') },
+  { label: 'Mehr', href: url('#mehr') },
+];
+---
+
+<header class="border-b border-white/10">
+  <div class="mx-auto flex h-14 max-w-[76rem] items-center gap-5 px-4 sm:gap-8 sm:px-6">
+    <a href={url()} class="shrink-0" aria-label="InfernoMate, Startseite">
+      <img src={flame.src} alt="" width="28" height="28" class="size-7" />
+    </a>
+    <nav class="flex min-w-0 gap-5 overflow-x-auto text-sm font-semibold text-white/60 [scrollbar-width:none] sm:gap-7" aria-label="Hauptmenü">
+      {nav.map((item, i) => <a href={item.href} class:list={['shrink-0 py-1 transition-colors hover:text-paper', i > 1 && 'hidden sm:block']}>{item.label}</a>)}
+      <a href={site.shop} rel="noopener" class="hidden shrink-0 items-center gap-0.5 py-1 transition-colors hover:text-paper sm:inline-flex">
+        Shop <ArrowUpRight class="size-3.5" aria-hidden="true" />
+      </a>
+    </nav>
+    <a href={site.twitch} rel="noopener" class="ml-auto shrink-0 rounded-md bg-ember px-3.5 py-2 text-sm font-bold text-white transition-colors hover:bg-ember-light">
+      Twitch
+    </a>
+  </div>
+</header>

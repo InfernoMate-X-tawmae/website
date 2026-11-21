@@ -1,0 +1,126 @@
+---
+import Twitch from '~icons/simple-icons/twitch';
+import MiniBoard from './MiniBoard.astro';
+import { fmt, pct } from '../lib/format';
+import type { TopRow, TwitchData } from '../data/types';
+
+interface Props {
+  twitch: TwitchData;
+}
+
+const { twitch } = Astro.props;
+const { subs, gifts, bits, followers } = twitch;
+const avg = (a: number, b: number) => new Intl.NumberFormat('de-DE', { maximumFractionDigits: 1 }).format(b > 0 ? a / b : 0);
+const since = (unix: number) =>
+  'seit ' + new Intl.DateTimeFormat('de-DE', { month: '2-digit', year: 'numeric', timeZone: 'Europe/Berlin' }).format(new Date(unix * 1000));
+
+const panels: {
+  key: string;
+  name: string;
+  count: number;
+  countLabel: string;
+  split?: { left: string; right: string; leftPct: number };
+  rows: [string, string][];
+  topLabel: string;
+  top: TopRow[];
+  topValue: (v: number) => string;
+}[] = [
+  {
+    key: 'subs',
+    name: 'Subs',
+    count: subs.total,
+    countLabel: 'aktive Subs',
+    split: { left: 'selbst bezahlt', right: 'geschenkt', leftPct: 100 - pct(subs.gifted, subs.total) },
+    rows: [
+      ['Tier 1', fmt(subs.tier1)],
+      ['Tier 2', fmt(subs.tier2)],
+      ['Tier 3', fmt(subs.tier3)],
+    ],
+    topLabel: 'Meiste Sub-Monate',
+    top: subs.top,
+    topValue: (v) => `${fmt(v)} ${v === 1 ? 'Monat' : 'Monate'}`,
+  },
+  {
+    key: 'gifts',
+    name: 'Gifted Subs',
+    count: gifts.total,
+    countLabel: 'verschenkt',
+    rows: [
+      ['Leute, die verschenkt haben', fmt(gifts.gifters)],
+      ['Im Schnitt pro Gifter', avg(gifts.total, gifts.gifters)],
+    ],
+    topLabel: 'Meiste Gifts',
+    top: gifts.top,
+    topValue: (v) => `${fmt(v)} Subs`,
+  },
+  {
+    key: 'bits',
+    name: 'Bits',
+    count: bits.topTotal,
+    countLabel: 'von den Top 100',
+    rows: [['Platz 1 allein', bits.top[0] ? `${pct(bits.top[0].value, bits.topTotal)} %` : '–']],
+    topLabel: 'Meiste Bits',
+    top: bits.top,
+    topValue: (v) => fmt(v),
+  },
+  {
+    key: 'follower',
+    name: 'Follower',
+    count: followers.total,
+    countLabel: 'Follower',
+    rows: [['Neu in den letzten 7 Tagen', fmt(followers.lastWeek)]],
+    topLabel: 'Am längsten dabei',
+    top: followers.top,
+    topValue: since,
+  },
+];
+---
+
+<section class="border-y border-white/[0.06] bg-raised" aria-labelledby="twitch">
+  <div class="mx-auto max-w-[76rem] px-4 py-16 sm:px-6 sm:py-20">
+    <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
+      <h2 id="twitch" class="display text-6xl sm:text-7xl">Twitch</h2>
+      <p class="flex items-center gap-2 text-white/60"><Twitch class="size-4" aria-hidden="true" /> Subs, Gifts, Bits und Follower</p>
+    </div>
+
+    <div class="mt-10 grid border-t border-white/15 lg:grid-cols-2">
+      {panels.map((g, i) => (
+        <article class:list={['flex flex-col border-white/10 py-9 lg:row-span-2 lg:grid lg:grid-rows-subgrid', i > 0 && 'border-t', i === 1 && 'lg:border-t-0', i % 2 === 0 ? 'lg:border-r lg:pr-12' : 'lg:pl-12']}>
+          <div>
+            <h3 class="display text-5xl">{g.name}</h3>
+
+            <p class="mt-5 flex items-baseline gap-2.5">
+              <span class="display num text-7xl">{fmt(g.count)}</span>
+              <span class="text-white/55">{g.countLabel}</span>
+            </p>
+
+            {g.split && (
+              <div class="mt-5">
+                <div class="flex h-2.5 overflow-hidden rounded-[2px] bg-white/10" role="img" aria-label={`${g.split.leftPct} % ${g.split.left}, ${100 - g.split.leftPct} % ${g.split.right}`}>
+                  <span class="block h-full bg-ember" style={`width:${g.split.leftPct}%`}></span>
+                </div>
+                <p class="mt-1.5 flex justify-between text-sm">
+                  <span><span class="font-bold">{g.split.leftPct} %</span> <span class="text-white/55">{g.split.left}</span></span>
+                  <span><span class="font-bold">{100 - g.split.leftPct} %</span> <span class="text-white/55">{g.split.right}</span></span>
+                </p>
+              </div>
+            )}
+
+            <dl class="mt-5 text-sm">
+              {g.rows.map(([label, value]) => (
+                <div class="flex justify-between gap-4 border-t border-white/[0.08] py-2">
+                  <dt class="text-white/55">{label}</dt>
+                  <dd class="num text-right font-semibold">{value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+
+          <div class="pt-6">
+            <MiniBoard id={`top-${g.key}`} label={g.topLabel} rows={g.top} value={g.topValue} />
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

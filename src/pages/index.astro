@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Masthead from '../components/Masthead.astro';
+import Leaderboard from '../components/Leaderboard.astro';
+import Casino from '../components/Casino.astro';
+import ChatGames from '../components/ChatGames.astro';
+import FindPlayer from '../components/FindPlayer.astro';
+import TwitchStats from '../components/TwitchStats.astro';
+import Join from '../components/Join.astro';
+import Footer from '../components/Footer.astro';
+import { loadData } from '../lib/data';
+import type { CasinoData, GamesData, LoyaltyData, TwitchData } from '../data/types';
+
+const loyalty = await loadData<LoyaltyData>('loyalty.json');
+const casino = await loadData<CasinoData>('casino.json');
+const games = await loadData<GamesData>('games.json');
+const twitch = await loadData<TwitchData>('twitch.json');
+---
+
+<Base>
+  <Header />
+  <main>
+    <Masthead loyalty={loyalty} />
+    <Leaderboard loyalty={loyalty} />
+    <Casino casino={casino} pointsName={loyalty.pointsName} />
+    <ChatGames games={games} pointsName={loyalty.pointsName} />
+    <TwitchStats twitch={twitch} />
+    <FindPlayer />
+    <Join />
+  </main>
+  <Footer />
+</Base>

@@ -1,0 +1,121 @@
+---
+import ChevronDown from '~icons/lucide/chevron-down';
+import Avatar from './Avatar.astro';
+import { url } from '../lib/format';
+import type { TopRow } from '../data/types';
+
+interface Props {
+  id: string;
+  label: string;
+  rows: TopRow[];
+  value: (v: number) => string;
+  visible?: number;
+}
+
+const { id, label, rows, value, visible = 3 } = Astro.props;
+const first = rows.slice(0, visible);
+const rest = rows.slice(visible);
+const more = `Top ${rows.length} anzeigen`;
+const less = 'Weniger anzeigen';
+---
+
+<div class="mini-board">
+  <div class="flex items-baseline justify-between gap-4">
+    <p class="text-xs font-semibold text-white/55">{label}</p>
+    {rest.length > 0 && (
+      <button
+        type="button"
+        class="flex cursor-pointer items-center gap-1 text-xs font-semibold text-white/55 transition-colors hover:text-paper"
+        aria-expanded="false"
+        aria-controls={`${id}-more`}
+        data-mini-toggle
+        data-more={more}
+        data-less={less}
+      >
+        <span data-label>{more}</span>
+        <ChevronDown class="chev size-3.5" aria-hidden="true" />
+      </button>
+    )}
+  </div>
+
+  {rows.length === 0 && <p class="mt-2 text-sm text-white/45">Noch niemand.</p>}
+
+  {[first, rest].map((part, n) =>
+    part.length === 0 ? null : (
+      <div
+        id={n === 1 ? `${id}-more` : undefined}
+        class:list={[n === 1 && 'mini-more grid']}
+        data-open={n === 1 ? 'false' : undefined}
+        inert={n === 1}
+      >
+        <div class:list={[n === 1 && 'min-h-0 overflow-hidden']}>
+          <ol class:list={['grid gap-0.5', n === 0 ? 'mt-2' : 'pt-0.5']} start={n === 0 ? 1 : visible + 1}>
+            {part.map((t, j) => {
+              const k = n === 0 ? j : visible + j;
+              return (
+                <li style={`--k:${j}`}>
+                  <a href={url(`spieler/?name=${encodeURIComponent(t.login)}`)} class="group flex items-center gap-3 rounded-md py-1">
+                    <span class:list={['display num w-6 text-2xl', k === 0 ? 'text-ember-light' : 'text-white/35']}>{k + 1}</span>
+                    <Avatar src={t.avatar} name={t.name} size={32} class="size-8 text-sm" />
+                    <span class="min-w-0 flex-1 truncate font-semibold transition-colors group-hover:text-ember-light">{t.name}</span>
+                    <span class="num font-bold">{value(t.value)}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </div>
+    ),
+  )}
+</div>
+
+<style>
+  .mini-more {
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.45s var(--ease-out-quart);
+  }
+  .mini-more[data-open='true'] {
+    grid-template-rows: 1fr;
+  }
+  .mini-more li {
+    opacity: 0;
+    transform: translateY(-6px);
+    transition:
+      opacity 0.2s ease-out,
+      transform 0.35s var(--ease-out-quart);
+  }
+  .mini-more[data-open='true'] li {
+    opacity: 1;
+    transform: none;
+    transition-delay: calc(var(--k) * 35ms + 60ms);
+  }
+  .mini-board :global(.chev) {
+    transition: transform 0.35s var(--ease-out-quart);
+  }
+  .mini-board button[aria-expanded='true'] :global(.chev) {
+    transform: rotate(180deg);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .mini-more,
+    .mini-more li,
+    .mini-board :global(.chev) {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  for (const button of document.querySelectorAll<HTMLButtonElement>('[data-mini-toggle]')) {
+    button.addEventListener('click', () => {
+      const panel = document.getElementById(button.getAttribute('aria-controls')!);
+      if (!panel) return;
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      panel.dataset.open = String(open);
+      panel.toggleAttribute('inert', !open);
+      button.setAttribute('aria-expanded', String(open));
+      const label = button.querySelector('[data-label]');
+      if (label) label.textContent = open ? button.dataset.less! : button.dataset.more!;
+    });
+  }
+</script>

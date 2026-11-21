@@ -1,0 +1,28 @@
+---
+import flame from '../assets/brand/flame.webp';
+import SocialIcon from './SocialIcon.astro';
+import { site, socials } from '../data/site';
+---
+
+<footer class="border-t border-white/10">
+  <div class="mx-auto grid max-w-[76rem] gap-6 px-4 py-10 sm:grid-cols-[1fr_auto] sm:items-center sm:px-6">
+    <div class="flex items-center gap-3">
+      <img src={flame.src} alt="" width="32" height="32" class="size-8" />
+      <span class="display text-3xl">Inferno<span class="text-ember">Mate</span></span>
+    </div>
+    <ul class="-ml-2.5 flex flex-wrap gap-1 sm:ml-0 sm:-mr-2.5 sm:justify-self-end" aria-label="Socials">
+      {socials.map((s) => (
+        <li>
+          <a href={s.href} rel="noopener" aria-label={s.label} class="flex size-10 items-center justify-center rounded-md text-white/60 transition-colors hover:bg-white/5 hover:text-paper">
+            <SocialIcon id={s.id} class="size-[1.1rem]" />
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="text-sm text-white/50">© {new Date().getFullYear()} {site.name}</p>
+    <nav class="flex gap-6 text-sm text-white/50 sm:justify-self-end" aria-label="Rechtliches">
+      <a href={site.imprint} class="transition-colors hover:text-paper">Impressum</a>
+      <a href={site.privacy} class="transition-colors hover:text-paper">Datenschutz</a>
+    </nav>
+  </div>
+</footer>

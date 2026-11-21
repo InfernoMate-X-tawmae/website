@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T20:37:36+01:00",
+  "updatedAt": "2026-11-21T20:44:57+01:00",
   "subs": {
     "total": 5,
     "tier1": 5,
@@ -201,7 +201,7 @@
     ]
   },
   "followers": {
-    "total": 397,
+    "total": 396,
     "lastWeek": 7,
     "top": [
       {
@@ -215,12 +215,6 @@
         "name": "therealslimotter",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/387be9cd-dde7-4c84-bd62-5e6a609a70e8-profile_image-300x300.png",
         "value": 1502982259
-      },
-      {
-        "login": "infernomatebot",
-        "name": "InfernoMateBot",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e08ce584-046c-4051-bc15-7be939793216-profile_image-300x300.png",
-        "value": 1503069976
       },
       {
         "login": "ihugoo",
@@ -263,6 +257,12 @@
         "name": "Mandy_on_Tour",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e2a6afb6-aa80-4903-a150-b45f374444c3-profile_image-300x300.png",
         "value": 1511659111
+      },
+      {
+        "login": "garciabeste",
+        "name": "GarciaBeste",
+        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/13e5fa74-defa-11e9-809c-784f43822e80-profile_image-300x300.png",
+        "value": 1511710387
       }
     ]
   }

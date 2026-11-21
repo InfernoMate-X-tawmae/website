@@ -1,0 +1,252 @@
+{
+  "updatedAt": "2026-11-21T17:09:40+01:00",
+  "pointsName": "GAMBA Coins",
+  "leaderboards": {
+    "current": [
+      {
+        "rank": 1,
+        "userId": "735647318",
+        "login": "r0astytv",
+        "name": "r0astytv",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6fcc8c5d-7dcc-495c-aec2-d0b2cc3e1a53-profile_image-300x300.png",
+        "points": 10000680
+      },
+      {
+        "rank": 2,
+        "userId": "107655116",
+        "login": "vollkrasses",
+        "name": "vollkrasses",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
+        "points": 822262
+      },
+      {
+        "rank": 3,
+        "userId": "138663207",
+        "login": "lenamelody",
+        "name": "LenaMelody",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
+        "points": 754983
+      },
+      {
+        "rank": 4,
+        "userId": "1457949106",
+        "login": "homestaterp_streamertool",
+        "name": "HomeStateRP_Streamertool",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/d6c74cb1-5f90-45a6-91e6-e78a1b2a37c4-profile_image-300x300.png",
+        "points": 753985
+      },
+      {
+        "rank": 5,
+        "userId": "509514463",
+        "login": "red_deevil",
+        "name": "red_deevil",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
+        "points": 470044
+      },
+      {
+        "rank": 6,
+        "userId": "133617601",
+        "login": "lynox97",
+        "name": "Lynox97",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e97e9f6-e68f-4486-85ab-ebe6abfbcf35-profile_image-300x300.png",
+        "points": 233560
+      },
+      {
+        "rank": 7,
+        "userId": "107593259",
+        "login": "headman_666",
+        "name": "headman_666",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/41884fb4-1f06-4dc4-9c13-b90590178ddd-profile_image-300x300.jpeg",
+        "points": 229470
+      },
+      {
+        "rank": 8,
+        "userId": "1058215643",
+        "login": "pierreliusmaximus",
+        "name": "PierreliusMaximus",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/ad3126fd-fa95-411c-9b38-3b866a63a9a4-profile_image-300x300.png",
+        "points": 226243
+      },
+      {
+        "rank": 9,
+        "userId": "167643924",
+        "login": "phoebe_coma",
+        "name": "phoebe_coma",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e70a0974-3bf0-43bf-a2f5-b2c97f2e8588-profile_image-300x300.png",
+        "points": 204470
+      },
+      {
+        "rank": 10,
+        "userId": "117861313",
+        "login": "schlenki",
+        "name": "Schlenki",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/1c96c6da-3133-4bdb-9b11-5727ffbb81ff-profile_image-300x300.png",
+        "points": 176940
+      }
+    ],
+    "week": [
+      {
+        "rank": 1,
+        "userId": "107655116",
+        "login": "vollkrasses",
+        "name": "vollkrasses",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
+        "points": 28560
+      },
+      {
+        "rank": 2,
+        "userId": "1457949106",
+        "login": "homestaterp_streamertool",
+        "name": "HomeStateRP_Streamertool",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/d6c74cb1-5f90-45a6-91e6-e78a1b2a37c4-profile_image-300x300.png",
+        "points": 13425
+      },
+      {
+        "rank": 3,
+        "userId": "138663207",
+        "login": "lenamelody",
+        "name": "LenaMelody",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
+        "points": 13120
+      },
+      {
+        "rank": 4,
+        "userId": "509514463",
+        "login": "red_deevil",
+        "name": "red_deevil",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
+        "points": 8656
+      },
+      {
+        "rank": 5,
+        "userId": "107593259",
+        "login": "headman_666",
+        "name": "headman_666",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/41884fb4-1f06-4dc4-9c13-b90590178ddd-profile_image-300x300.jpeg",
+        "points": 7620
+      },
+      {
+        "rank": 6,
+        "userId": "167643924",
+        "login": "phoebe_coma",
+        "name": "phoebe_coma",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e70a0974-3bf0-43bf-a2f5-b2c97f2e8588-profile_image-300x300.png",
+        "points": 7000
+      },
+      {
+        "rank": 7,
+        "userId": "133617601",
+        "login": "lynox97",
+        "name": "Lynox97",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e97e9f6-e68f-4486-85ab-ebe6abfbcf35-profile_image-300x300.png",
+        "points": 5920
+      },
+      {
+        "rank": 8,
+        "userId": "49472582",
+        "login": "damagebutter",
+        "name": "Damagebutter",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
+        "points": 5020
+      },
+      {
+        "rank": 9,
+        "userId": "1514525067",
+        "login": "clown13121",
+        "name": "clown13121",
+        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/998f01ae-def8-11e9-b95c-784f43822e80-profile_image-300x300.png",
+        "points": 4730
+      },
+      {
+        "rank": 10,
+        "userId": "409740903",
+        "login": "cavecanem007",
+        "name": "cavecanem007",
+        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/13e5fa74-defa-11e9-809c-784f43822e80-profile_image-300x300.png",
+        "points": 3960
+      }
+    ],
+    "month": [
+      {
+        "rank": 1,
+        "userId": "107655116",
+        "login": "vollkrasses",
+        "name": "vollkrasses",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
+        "points": 55747
+      },
+      {
+        "rank": 2,
+        "userId": "138663207",
+        "login": "lenamelody",
+        "name": "LenaMelody",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
+        "points": 36053
+      },
+      {
+        "rank": 3,
+        "userId": "1457949106",
+        "login": "homestaterp_streamertool",
+        "name": "HomeStateRP_Streamertool",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/d6c74cb1-5f90-45a6-91e6-e78a1b2a37c4-profile_image-300x300.png",
+        "points": 35925
+      },
+      {
+        "rank": 4,
+        "userId": "509514463",
+        "login": "red_deevil",
+        "name": "red_deevil",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
+        "points": 33734
+      },
+      {
+        "rank": 5,
+        "userId": "107593259",
+        "login": "headman_666",
+        "name": "headman_666",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/41884fb4-1f06-4dc4-9c13-b90590178ddd-profile_image-300x300.jpeg",
+        "points": 18240
+      },
+      {
+        "rank": 6,
+        "userId": "49472582",
+        "login": "damagebutter",
+        "name": "Damagebutter",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
+        "points": 15264
+      },
+      {
+        "rank": 7,
+        "userId": "167643924",
+        "login": "phoebe_coma",
+        "name": "phoebe_coma",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e70a0974-3bf0-43bf-a2f5-b2c97f2e8588-profile_image-300x300.png",
+        "points": 13970
+      },
+      {
+        "rank": 8,
+        "userId": "133617601",
+        "login": "lynox97",
+        "name": "Lynox97",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e97e9f6-e68f-4486-85ab-ebe6abfbcf35-profile_image-300x300.png",
+        "points": 13850
+      },
+      {
+        "rank": 9,
+        "userId": "205445100",
+        "login": "toxic_lemon1",
+        "name": "toxic_lemon1",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/119f9274-4b9f-42e7-a426-c640fcc38169-profile_image-300x300.jpeg",
+        "points": 8040
+      },
+      {
+        "rank": 10,
+        "userId": "409740903",
+        "login": "cavecanem007",
+        "name": "cavecanem007",
+        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/13e5fa74-defa-11e9-809c-784f43822e80-profile_image-300x300.png",
+        "points": 7370
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "updatedAt": "2026-11-21T17:09:40+01:00",
+  "roulette": {
+    "rounds": 14,
+    "wagered": 419020,
+    "paidOut": 480040,
+    "lastNumbers": [
+      18,
+      0,
+      12,
+      31,
+      35,
+      11,
+      34,
+      12,
+      3,
+      14,
+      18,
+      36
+    ],
+    "top": [
+      {
+        "login": "infernomate",
+        "name": "InfernoMate",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/94be7ff6-8069-40ba-92c2-caf48fa9da76-profile_image-300x300.png",
+        "value": 73500
+      },
+      {
+        "login": "lenamelody",
+        "name": "LenaMelody",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
+        "value": 420
+      },
+      {
+        "login": "red_deevil",
+        "name": "red_deevil",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
+        "value": 100
+      },
+      {
+        "login": "lynox97",
+        "name": "Lynox97",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e97e9f6-e68f-4486-85ab-ebe6abfbcf35-profile_image-300x300.png",
+        "value": -1000
+      },
+      {
+        "login": "vollkrasses",
+        "name": "vollkrasses",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
+        "value": -1000
+      },
+      {
+        "login": "damagebutter",
+        "name": "Damagebutter",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
+        "value": -11000
+      }
+    ]
+  },
+  "blackjack": {
+    "hands": 8,
+    "won": 4,
+    "blackjacks": 1,
+    "wagered": 7500,
+    "paidOut": 7500,
+    "top": []
+  },
+  "poker": {
+    "hands": 4,
+    "won": 2,
+    "wagered": 16500,
+    "paidOut": 12000,
+    "top": [
+      {
+        "login": "vollkrasses",
+        "name": "vollkrasses",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
+        "value": 6000
+      },
+      {
+        "login": "infernomate",
+        "name": "InfernoMate",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/94be7ff6-8069-40ba-92c2-caf48fa9da76-profile_image-300x300.png",
+        "value": -10500
+      }
+    ]
+  }
+}

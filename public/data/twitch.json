@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-21T20:44:57+01:00",
+  "updatedAt": "2026-11-24T00:16:53+01:00",
   "subs": {
-    "total": 5,
-    "tier1": 5,
+    "total": 6,
+    "tier1": 6,
     "tier2": 0,
     "tier3": 0,
     "gifted": 0,
@@ -23,7 +23,7 @@
         "login": "vollkrasses",
         "name": "vollkrasses",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
-        "value": 24
+        "value": 25
       },
       {
         "login": "das_wildfraeulein",
@@ -201,8 +201,8 @@
     ]
   },
   "followers": {
-    "total": 396,
-    "lastWeek": 7,
+    "total": 399,
+    "lastWeek": 8,
     "top": [
       {
         "login": "vollkrasses",

@@ -1,29 +1,35 @@
 {
-  "updatedAt": "2026-11-21T20:44:57+01:00",
+  "updatedAt": "2026-11-24T00:16:53+01:00",
   "roulette": {
-    "rounds": 14,
-    "wagered": 419020,
-    "paidOut": 480040,
+    "rounds": 19,
+    "wagered": 505909,
+    "paidOut": 611966,
     "lastNumbers": [
+      12,
+      34,
+      14,
+      9,
+      26,
       18,
       0,
       12,
       31,
       35,
       11,
-      34,
-      12,
-      3,
-      14,
-      18,
-      36
+      34
     ],
     "top": [
       {
         "login": "infernomate",
         "name": "InfernoMate",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/94be7ff6-8069-40ba-92c2-caf48fa9da76-profile_image-300x300.png",
-        "value": 73500
+        "value": 117037
+      },
+      {
+        "login": "red_deevil",
+        "name": "red_deevil",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
+        "value": 600
       },
       {
         "login": "lenamelody",
@@ -32,56 +38,99 @@
         "value": 420
       },
       {
-        "login": "red_deevil",
-        "name": "red_deevil",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
-        "value": 100
-      },
-      {
         "login": "lynox97",
         "name": "Lynox97",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e97e9f6-e68f-4486-85ab-ebe6abfbcf35-profile_image-300x300.png",
         "value": -1000
       },
       {
-        "login": "vollkrasses",
-        "name": "vollkrasses",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
-        "value": -1000
+        "login": "relativwolf",
+        "name": "RelativWolf",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/09c790a1-1cc0-42ac-8357-89712b711341-profile_image-300x300.png",
+        "value": -3000
       },
       {
         "login": "damagebutter",
         "name": "Damagebutter",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
-        "value": -11000
+        "value": -8000
       }
     ]
   },
   "blackjack": {
-    "hands": 8,
-    "won": 4,
+    "hands": 27,
+    "won": 10,
     "blackjacks": 1,
-    "wagered": 7500,
-    "paidOut": 7500,
-    "top": []
-  },
-  "poker": {
-    "hands": 4,
-    "won": 2,
-    "wagered": 16500,
-    "paidOut": 12000,
+    "wagered": 641002,
+    "paidOut": 623500,
     "top": [
       {
         "login": "vollkrasses",
         "name": "vollkrasses",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
-        "value": 6000
+        "value": 100000
       },
       {
         "login": "infernomate",
         "name": "InfernoMate",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/94be7ff6-8069-40ba-92c2-caf48fa9da76-profile_image-300x300.png",
-        "value": -10500
+        "value": 4500
+      },
+      {
+        "login": "phoebe_coma",
+        "name": "phoebe_coma",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e70a0974-3bf0-43bf-a2f5-b2c97f2e8588-profile_image-300x300.png",
+        "value": -737
+      },
+      {
+        "login": "damagebutter",
+        "name": "Damagebutter",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
+        "value": -17265
+      },
+      {
+        "login": "relativwolf",
+        "name": "RelativWolf",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/09c790a1-1cc0-42ac-8357-89712b711341-profile_image-300x300.png",
+        "value": -104000
+      }
+    ]
+  },
+  "poker": {
+    "hands": 17,
+    "won": 9,
+    "wagered": 257879,
+    "paidOut": 190000,
+    "top": [
+      {
+        "login": "relativwolf",
+        "name": "RelativWolf",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/09c790a1-1cc0-42ac-8357-89712b711341-profile_image-300x300.png",
+        "value": 55000
+      },
+      {
+        "login": "vollkrasses",
+        "name": "vollkrasses",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
+        "value": -10000
+      },
+      {
+        "login": "phoebe_coma",
+        "name": "phoebe_coma",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e70a0974-3bf0-43bf-a2f5-b2c97f2e8588-profile_image-300x300.png",
+        "value": -18879
+      },
+      {
+        "login": "damagebutter",
+        "name": "Damagebutter",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
+        "value": -39000
+      },
+      {
+        "login": "infernomate",
+        "name": "InfernoMate",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/94be7ff6-8069-40ba-92c2-caf48fa9da76-profile_image-300x300.png",
+        "value": -55000
       }
     ]
   }

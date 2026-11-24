@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T00:16:53+01:00",
+  "updatedAt": "2026-11-25T00:13:48+01:00",
   "pointsName": "GAMBA Coins",
   "leaderboards": {
     "current": [
@@ -9,7 +9,7 @@
         "login": "vollkrasses",
         "name": "vollkrasses",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
-        "points": 812752
+        "points": 817097
       },
       {
         "rank": 2,
@@ -17,7 +17,7 @@
         "login": "lenamelody",
         "name": "LenaMelody",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
-        "points": 759973
+        "points": 764588
       },
       {
         "rank": 3,
@@ -25,7 +25,7 @@
         "login": "red_deevil",
         "name": "red_deevil",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
-        "points": 471904
+        "points": 478064
       },
       {
         "rank": 4,
@@ -33,7 +33,7 @@
         "login": "lynox97",
         "name": "Lynox97",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e97e9f6-e68f-4486-85ab-ebe6abfbcf35-profile_image-300x300.png",
-        "points": 233580
+        "points": 235420
       },
       {
         "rank": 5,
@@ -41,7 +41,7 @@
         "login": "headman_666",
         "name": "headman_666",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/41884fb4-1f06-4dc4-9c13-b90590178ddd-profile_image-300x300.jpeg",
-        "points": 229470
+        "points": 231590
       },
       {
         "rank": 6,
@@ -57,7 +57,7 @@
         "login": "phoebe_coma",
         "name": "phoebe_coma",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e70a0974-3bf0-43bf-a2f5-b2c97f2e8588-profile_image-300x300.png",
-        "points": 190099
+        "points": 190569
       },
       {
         "rank": 8,
@@ -65,7 +65,7 @@
         "login": "schlenki",
         "name": "Schlenki",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/1c96c6da-3133-4bdb-9b11-5727ffbb81ff-profile_image-300x300.png",
-        "points": 176960
+        "points": 177740
       },
       {
         "rank": 9,
@@ -99,7 +99,7 @@
         "login": "vollkrasses",
         "name": "vollkrasses",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
-        "points": 165490
+        "points": 169835
       },
       {
         "rank": 3,
@@ -107,7 +107,7 @@
         "login": "damagebutter",
         "name": "Damagebutter",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
-        "points": 66620
+        "points": 69590
       },
       {
         "rank": 4,
@@ -115,18 +115,34 @@
         "login": "lenamelody",
         "name": "LenaMelody",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
-        "points": 4990
+        "points": 9605
       },
       {
         "rank": 5,
+        "userId": "509514463",
+        "login": "red_deevil",
+        "name": "red_deevil",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
+        "points": 8020
+      },
+      {
+        "rank": 6,
+        "userId": "126016398",
+        "login": "ihugooo",
+        "name": "ihugooo",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/efda0f92-23f0-477b-b230-2a3faf16bae3-profile_image-300x300.png",
+        "points": 3660
+      },
+      {
+        "rank": 7,
         "userId": "167643924",
         "login": "phoebe_coma",
         "name": "phoebe_coma",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e70a0974-3bf0-43bf-a2f5-b2c97f2e8588-profile_image-300x300.png",
-        "points": 2620
+        "points": 3090
       },
       {
-        "rank": 6,
+        "rank": 8,
         "userId": "272277209",
         "login": "karpau1980_karsten",
         "name": "karpau1980_karsten",
@@ -134,7 +150,7 @@
         "points": 2220
       },
       {
-        "rank": 7,
+        "rank": 9,
         "userId": "409740903",
         "login": "cavecanem007",
         "name": "cavecanem007",
@@ -142,28 +158,12 @@
         "points": 2180
       },
       {
-        "rank": 8,
-        "userId": "49419714",
-        "login": "rezix4k",
-        "name": "Rezix4k",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/5d5dd8f8-74fd-43fa-814b-409b3158d750-profile_image-300x300.png",
-        "points": 2090
-      },
-      {
-        "rank": 9,
-        "userId": "509514463",
-        "login": "red_deevil",
-        "name": "red_deevil",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
-        "points": 1860
-      },
-      {
         "rank": 10,
-        "userId": "275798162",
-        "login": "brudermusslossoos",
-        "name": "brudermusslossoos",
-        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/998f01ae-def8-11e9-b95c-784f43822e80-profile_image-300x300.png",
-        "points": 890
+        "userId": "107593259",
+        "login": "headman_666",
+        "name": "headman_666",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/41884fb4-1f06-4dc4-9c13-b90590178ddd-profile_image-300x300.jpeg",
+        "points": 2120
       }
     ],
     "month": [
@@ -173,7 +173,7 @@
         "login": "vollkrasses",
         "name": "vollkrasses",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
-        "points": 221237
+        "points": 225582
       },
       {
         "rank": 2,
@@ -189,7 +189,7 @@
         "login": "damagebutter",
         "name": "Damagebutter",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
-        "points": 81884
+        "points": 84854
       },
       {
         "rank": 4,
@@ -197,7 +197,7 @@
         "login": "lenamelody",
         "name": "LenaMelody",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
-        "points": 41043
+        "points": 45658
       },
       {
         "rank": 5,
@@ -205,7 +205,7 @@
         "login": "red_deevil",
         "name": "red_deevil",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
-        "points": 36094
+        "points": 42254
       },
       {
         "rank": 6,
@@ -213,7 +213,7 @@
         "login": "headman_666",
         "name": "headman_666",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/41884fb4-1f06-4dc4-9c13-b90590178ddd-profile_image-300x300.jpeg",
-        "points": 18240
+        "points": 20360
       },
       {
         "rank": 7,
@@ -221,7 +221,7 @@
         "login": "phoebe_coma",
         "name": "phoebe_coma",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e70a0974-3bf0-43bf-a2f5-b2c97f2e8588-profile_image-300x300.png",
-        "points": 16590
+        "points": 17060
       },
       {
         "rank": 8,
@@ -229,7 +229,7 @@
         "login": "lynox97",
         "name": "Lynox97",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e97e9f6-e68f-4486-85ab-ebe6abfbcf35-profile_image-300x300.png",
-        "points": 13870
+        "points": 15710
       },
       {
         "rank": 9,
@@ -245,7 +245,7 @@
         "login": "toxic_lemon1",
         "name": "toxic_lemon1",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/119f9274-4b9f-42e7-a426-c640fcc38169-profile_image-300x300.jpeg",
-        "points": 8750
+        "points": 9120
       }
     ]
   }

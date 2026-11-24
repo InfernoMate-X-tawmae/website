@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T00:16:53+01:00",
+  "updatedAt": "2026-11-25T00:13:48+01:00",
   "subs": {
     "total": 6,
     "tier1": 6,
@@ -38,6 +38,12 @@
         "value": 8
       },
       {
+        "login": "schlenki",
+        "name": "Schlenki",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/1c96c6da-3133-4bdb-9b11-5727ffbb81ff-profile_image-300x300.png",
+        "value": 6
+      },
+      {
         "login": "exxentra01",
         "name": "exxentra01",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/868eb395-ef30-4648-93bc-9550c76b4612-profile_image-300x300.png",
@@ -60,12 +66,6 @@
         "name": "san_morino47",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/5415c69f-a17d-4a8d-89f8-d93fc5e31e15-profile_image-300x300.png",
         "value": 2
-      },
-      {
-        "login": "andy300179",
-        "name": "andy300179",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/0908301b-2333-4b1a-9c4d-fcd46f5abd89-profile_image-300x300.png",
-        "value": 1
       }
     ]
   },
@@ -202,7 +202,7 @@
   },
   "followers": {
     "total": 399,
-    "lastWeek": 8,
+    "lastWeek": 5,
     "top": [
       {
         "login": "vollkrasses",

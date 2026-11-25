@@ -1,38 +1,13 @@
 {
-  "updatedAt": "2026-11-25T00:13:48+01:00",
+  "updatedAt": "2026-11-25T02:27:15+01:00",
   "gamble": {
-    "plays": 6,
-    "wins": 6,
+    "plays": 0,
+    "wins": 0,
     "losses": 0,
-    "allIns": 6,
-    "pointsWon": 2504403,
+    "allIns": 0,
+    "pointsWon": 0,
     "pointsLost": 0,
-    "top": [
-      {
-        "login": "infernomate",
-        "name": "InfernoMate",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/94be7ff6-8069-40ba-92c2-caf48fa9da76-profile_image-300x300.png",
-        "value": 1873323
-      },
-      {
-        "login": "r0astytv",
-        "name": "r0astytv",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6fcc8c5d-7dcc-495c-aec2-d0b2cc3e1a53-profile_image-300x300.png",
-        "value": 387690
-      },
-      {
-        "login": "vollkrasses",
-        "name": "vollkrasses",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
-        "value": 140990
-      },
-      {
-        "login": "lenamelody",
-        "name": "LenaMelody",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
-        "value": 102400
-      }
-    ]
+    "top": []
   },
   "duels": {
     "played": 0,

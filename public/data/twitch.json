@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T00:13:48+01:00",
+  "updatedAt": "2026-11-25T02:27:15+01:00",
   "subs": {
     "total": 6,
     "tier1": 6,
@@ -202,7 +202,7 @@
   },
   "followers": {
     "total": 399,
-    "lastWeek": 5,
+    "lastWeek": 3,
     "top": [
       {
         "login": "vollkrasses",

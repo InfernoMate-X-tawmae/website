@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T01:18:05+01:00",
+  "updatedAt": "2026-11-26T01:37:16+01:00",
   "commands": [
     {
       "group": "",
@@ -41,14 +41,6 @@
         "!shoutout"
       ],
       "mod": true
-    },
-    {
-      "group": "Channel point redeems (mod overide)",
-      "name": "!askouija",
-      "triggers": [
-        "!askouija"
-      ],
-      "mod": false
     },
     {
       "group": "DYNAMIC TIMERS",
@@ -297,64 +289,6 @@
       "name": "Roulette Statistik",
       "triggers": [
         "!roulettestats"
-      ],
-      "mod": false
-    },
-    {
-      "group": "INFERNOMATE ROULETTE",
-      "name": "Abbrechen",
-      "triggers": [
-        "!rouletteAbbrechen"
-      ],
-      "mod": true
-    },
-    {
-      "group": "INFERNOMATE ROULETTE",
-      "name": "Hilfe",
-      "triggers": [
-        "!rouletteHilfe"
-      ],
-      "mod": false
-    },
-    {
-      "group": "INFERNOMATE ROULETTE",
-      "name": "Leaderboard",
-      "triggers": [
-        "!rouletteLeaderboard"
-      ],
-      "mod": false
-    },
-    {
-      "group": "INFERNOMATE ROULETTE",
-      "name": "Meine Wetten",
-      "triggers": [
-        "!meineWetten"
-      ],
-      "mod": false
-    },
-    {
-      "group": "INFERNOMATE ROULETTE",
-      "name": "Rad drehen",
-      "triggers": [
-        "!rouletteSpin"
-      ],
-      "mod": true
-    },
-    {
-      "group": "INFERNOMATE ROULETTE",
-      "name": "Setzen",
-      "triggers": [
-        "!roulette",
-        "!setzen",
-        "!bet"
-      ],
-      "mod": false
-    },
-    {
-      "group": "INFERNOMATE ROULETTE",
-      "name": "Stats",
-      "triggers": [
-        "!rouletteStats"
       ],
       "mod": false
     },

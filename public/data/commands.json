@@ -1,0 +1,1604 @@
+{
+  "updatedAt": "2026-11-26T01:18:05+01:00",
+  "commands": [
+    {
+      "group": "",
+      "name": "Check In",
+      "triggers": [
+        "!checkinlb"
+      ],
+      "mod": false
+    },
+    {
+      "group": "",
+      "name": "Multi",
+      "triggers": [
+        "!multi"
+      ],
+      "mod": true
+    },
+    {
+      "group": "",
+      "name": "Pokemon Guesser reveal",
+      "triggers": [
+        "!reveal"
+      ],
+      "mod": true
+    },
+    {
+      "group": "BETTER SHOUTOUTS",
+      "name": "[BETTER SHOUTOUTS] Clip SO",
+      "triggers": [
+        "!soclip"
+      ],
+      "mod": true
+    },
+    {
+      "group": "BETTER SHOUTOUTS",
+      "name": "[BETTER SHOUTOUTS] Shoutout",
+      "triggers": [
+        "!so",
+        "!shoutout"
+      ],
+      "mod": true
+    },
+    {
+      "group": "Channel point redeems (mod overide)",
+      "name": "!askouija",
+      "triggers": [
+        "!askouija"
+      ],
+      "mod": false
+    },
+    {
+      "group": "DYNAMIC TIMERS",
+      "name": "[DYNAMIC TIMERS] Add Stopwatch",
+      "triggers": [
+        "!addStopwatch",
+        "!stopwatch"
+      ],
+      "mod": true
+    },
+    {
+      "group": "DYNAMIC TIMERS",
+      "name": "[DYNAMIC TIMERS] Add Time",
+      "triggers": [
+        "!timeAdd",
+        "!addTime",
+        "!createTimer",
+        "!timerCreate",
+        "!addTimer"
+      ],
+      "mod": true
+    },
+    {
+      "group": "DYNAMIC TIMERS",
+      "name": "[DYNAMIC TIMERS] Continue Timer",
+      "triggers": [
+        "!resumeTimer",
+        "!timerResume",
+        "!timerContinue",
+        "!continueTimer"
+      ],
+      "mod": true
+    },
+    {
+      "group": "DYNAMIC TIMERS",
+      "name": "[DYNAMIC TIMERS] Delete Timer",
+      "triggers": [
+        "!removeTimer",
+        "!timerRemove",
+        "!timerDelete",
+        "!deleteTimer"
+      ],
+      "mod": true
+    },
+    {
+      "group": "DYNAMIC TIMERS",
+      "name": "[DYNAMIC TIMERS] Pause Timer",
+      "triggers": [
+        "!timerPause",
+        "!pauseTimer",
+        "!stopTimer",
+        "!timerStop"
+      ],
+      "mod": true
+    },
+    {
+      "group": "DYNAMIC TIMERS",
+      "name": "[DYNAMIC TIMERS] Remove Time",
+      "triggers": [
+        "!removeTime",
+        "!timeRemove",
+        "!deductTime",
+        "!timeDeduct"
+      ],
+      "mod": true
+    },
+    {
+      "group": "FISHING GAME",
+      "name": "[FISHING GAME] Auto-Fish",
+      "triggers": [
+        "!autoFish",
+        "!afkFish"
+      ],
+      "mod": false
+    },
+    {
+      "group": "FISHING GAME",
+      "name": "[FISHING GAME] Fish",
+      "triggers": [
+        "!fish"
+      ],
+      "mod": false
+    },
+    {
+      "group": "FISHING GAME",
+      "name": "[FISHING GAME] Leaderboard/Stats",
+      "triggers": [
+        "!fishLeaderboard",
+        "!fishLb",
+        "!fishStats"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Blackjack Bestenliste",
+      "triggers": [
+        "!blackjacktop"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Blackjack Doppeln",
+      "triggers": [
+        "!doppeln",
+        "!double"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Blackjack Hilfe",
+      "triggers": [
+        "!bjhilfe"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Blackjack Karte",
+      "triggers": [
+        "!karte",
+        "!hit"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Blackjack Setzen",
+      "triggers": [
+        "!blackjack"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Blackjack Statistik",
+      "triggers": [
+        "!blackjackstats"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Blackjack Stehen",
+      "triggers": [
+        "!stehen",
+        "!stand"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Blackjack Teilen",
+      "triggers": [
+        "!teilen",
+        "!split"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Poker Bestenliste",
+      "triggers": [
+        "!pokertop"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Poker Call",
+      "triggers": [
+        "!call"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Poker Fold",
+      "triggers": [
+        "!fold"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Poker Hilfe",
+      "triggers": [
+        "!pokerhilfe"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Poker Setzen",
+      "triggers": [
+        "!poker"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Poker Statistik",
+      "triggers": [
+        "!pokerstats"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Roulette Bestenliste",
+      "triggers": [
+        "!roulettetop"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Roulette Hilfe",
+      "triggers": [
+        "!roulettehilfe"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Roulette Meine Wetten",
+      "triggers": [
+        "!meinewetten"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Roulette Setzen",
+      "triggers": [
+        "!bet",
+        "!roulette",
+        "!setzen"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE CASINO",
+      "name": "Roulette Statistik",
+      "triggers": [
+        "!roulettestats"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE ROULETTE",
+      "name": "Abbrechen",
+      "triggers": [
+        "!rouletteAbbrechen"
+      ],
+      "mod": true
+    },
+    {
+      "group": "INFERNOMATE ROULETTE",
+      "name": "Hilfe",
+      "triggers": [
+        "!rouletteHilfe"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE ROULETTE",
+      "name": "Leaderboard",
+      "triggers": [
+        "!rouletteLeaderboard"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE ROULETTE",
+      "name": "Meine Wetten",
+      "triggers": [
+        "!meineWetten"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE ROULETTE",
+      "name": "Rad drehen",
+      "triggers": [
+        "!rouletteSpin"
+      ],
+      "mod": true
+    },
+    {
+      "group": "INFERNOMATE ROULETTE",
+      "name": "Setzen",
+      "triggers": [
+        "!roulette",
+        "!setzen",
+        "!bet"
+      ],
+      "mod": false
+    },
+    {
+      "group": "INFERNOMATE ROULETTE",
+      "name": "Stats",
+      "triggers": [
+        "!rouletteStats"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[High or Low] - Cashout",
+      "triggers": [
+        "!cashout"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[High or Low] - higher",
+      "triggers": [
+        "!higher"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[High or Low] - lower",
+      "triggers": [
+        "!lower"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[High or Low] - Start Game",
+      "triggers": [
+        "!higherlower"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[High or Low] - Stats",
+      "triggers": [
+        "!hlstats"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Accept Duel",
+      "triggers": [
+        "!accept"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Add Points To All Present Viewers",
+      "triggers": [
+        "!addToAllPresent",
+        "!addPointsToAllPresent",
+        "!addPointsToPresent",
+        "!addToViewers",
+        "!addPointsToViewers"
+      ],
+      "mod": true
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Add Points To All Users",
+      "triggers": [
+        "!addToAllUsers",
+        "!addPointsToAllUsers"
+      ],
+      "mod": true
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Add Points To User",
+      "triggers": [
+        "!addPoints",
+        "!pointsAdd"
+      ],
+      "mod": true
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Collect Taxes",
+      "triggers": [
+        "!collectTaxes",
+        "!taxesCollect",
+        "!taxCollection"
+      ],
+      "mod": true
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Enable Happy Hour",
+      "triggers": [
+        "!pointsHappyHour"
+      ],
+      "mod": true
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Enter Rumble",
+      "triggers": [
+        "!enterRumble"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Gamble",
+      "triggers": [
+        "!gamble",
+        "!roulette"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Get Points Balance",
+      "triggers": [
+        "!points"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Leaderboard",
+      "triggers": [
+        "!pointsLeaderboard",
+        "!leaderboardPoints"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Monthly Leaderboard",
+      "triggers": [
+        "!pointsLeaderboardMonthly"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Multiply All User's Points",
+      "triggers": [
+        "!multiplyAllUsersPoints"
+      ],
+      "mod": true
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Remove Points From User",
+      "triggers": [
+        "!removePoints",
+        "!pointsRemove"
+      ],
+      "mod": true
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Scratch Cards",
+      "triggers": [
+        "!scratchCard",
+        "!buyScratchCards"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Start Duel",
+      "triggers": [
+        "!duel"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Start Rumble",
+      "triggers": [
+        "!rumble"
+      ],
+      "mod": true
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Transfer Points",
+      "triggers": [
+        "!givePoints",
+        "!pointsGive",
+        "!transferPoints",
+        "!pointsTransfer"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LOYALTY POINTS",
+      "name": "[LOYALTY POINTS] Weekly Leaderboard",
+      "triggers": [
+        "!pointsLeaderboardWeekly"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LURKS & SB",
+      "name": "[LURKS & SB] Leaderboard",
+      "triggers": [
+        "!lurkLeaderboard",
+        "!leaderboardLurk",
+        "!topLurkers"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LURKS & SB",
+      "name": "[LURKS & SB] Lurk Check",
+      "triggers": [
+        "!lurkers",
+        "!currentLurkers"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LURKS & SB",
+      "name": "[LURKS & SB] Lurk End",
+      "triggers": [
+        "!unlurk",
+        "!back"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LURKS & SB",
+      "name": "[LURKS & SB] Lurk Start",
+      "triggers": [
+        "!lurk",
+        "!afk"
+      ],
+      "mod": false
+    },
+    {
+      "group": "LURKS & SB",
+      "name": "[LURKS & SB] Stats",
+      "triggers": [
+        "!lurkStats",
+        "!myLurks"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SLOT MACHINE",
+      "name": "[SLOT MACHINE] Leaderboard",
+      "triggers": [
+        "!slotsLeaderboard",
+        "!slotsLb",
+        "!slotLb",
+        "!slotsLeaderboard"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SLOT MACHINE",
+      "name": "[SLOT MACHINE] Spin",
+      "triggers": [
+        "!slots"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SLOT MACHINE",
+      "name": "[SLOT MACHINE] Stats",
+      "triggers": [
+        "!slotsStats",
+        "!slotStats"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SC] List Spotify Commands",
+      "triggers": [
+        "!spotifyCommands",
+        "!spotCommands"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Add Song To Playlist",
+      "triggers": [
+        "!addSong",
+        "!add",
+        "!saveSong"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Add Song To Playlist From Input",
+      "triggers": [
+        "!addSongToPlaylistFromInput"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Add To Liked Songs",
+      "triggers": [
+        "!addToLikedSongs",
+        "!addLike",
+        "!likeAdd"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Add To Viewers Like List",
+      "triggers": [
+        "!like"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Ban Song",
+      "triggers": [
+        "!banSong",
+        "!excludeSong"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Banned Song List",
+      "triggers": [
+        "!bannedSongs",
+        "!bannedSongList",
+        "!excludedSongs",
+        "!excludedSondList"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Bump Request To Top",
+      "triggers": [
+        "!bumpRequest",
+        "!bumpSong"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Change Device",
+      "triggers": [
+        "!changeDevice",
+        "!setDevice"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Change Playlist",
+      "triggers": [
+        "!playPlaylist",
+        "!setPlaylist",
+        "!changePlaylist"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Change Volume",
+      "triggers": [
+        "!vol",
+        "!volume",
+        "!songVolume"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Current Playlist",
+      "triggers": [
+        "!playlist",
+        "!currentPlaylist"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Current Song Link",
+      "triggers": [
+        "!songLink",
+        "!currentSongLink"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Current Song Name",
+      "triggers": [
+        "!song",
+        "!currentSong",
+        "!songName"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Device List",
+      "triggers": [
+        "!devices",
+        "!deviceList"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Get All Requests",
+      "triggers": [
+        "!requests",
+        "!allRequests",
+        "!getRequests",
+        "!getAllRequests"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Get Playlists",
+      "triggers": [
+        "!playlists",
+        "!getPlaylists"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Get Queue Position",
+      "triggers": [
+        "!myQueue",
+        "!myRequests",
+        "!queuePos",
+        "!queuePositions"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Get Top Artists",
+      "triggers": [
+        "!broadcasterTopArtists"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Get Top Songs",
+      "triggers": [
+        "!broadcasterTopTracks",
+        "!broadcasterTopSongs"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Get Users Likes",
+      "triggers": [
+        "!likes"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Last Song Name",
+      "triggers": [
+        "!lastSong",
+        "!lastSongName",
+        "!last"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Pause Song",
+      "triggers": [
+        "!pause",
+        "!stop",
+        "!pauseSong",
+        "!stopSong"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Play Song",
+      "triggers": [
+        "!play",
+        "!playSong",
+        "!continue"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Previous Song",
+      "triggers": [
+        "!back",
+        "!previous",
+        "!previousSong"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Queued Songs",
+      "triggers": [
+        "!queue",
+        "!queuedSongs"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Remove From Queue",
+      "triggers": [
+        "!remove",
+        "!removeFromQueue",
+        "!removeSong",
+        "!deleteSong",
+        "!deleteSongFromQueue"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Restart Current Song",
+      "triggers": [
+        "!restart",
+        "!restartSong",
+        "!restartCurrentSong",
+        "!replay",
+        "!replaySong"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Skip Song",
+      "triggers": [
+        "!skip",
+        "!next",
+        "!skipSong",
+        "!nextSong"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Song Request",
+      "triggers": [
+        "!sr"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Song Swap",
+      "triggers": [
+        "!songSwap"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Top Requested Artists",
+      "triggers": [
+        "!topArtists"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Top Requested Artists (User)",
+      "triggers": [
+        "!myTopArtists",
+        "!topArtistsUser"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Top Requested Songs",
+      "triggers": [
+        "!topSongs"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Top Requested Songs (User)",
+      "triggers": [
+        "!myTopSongs",
+        "!topSongsUser"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Unban Song",
+      "triggers": [
+        "!unbanSong",
+        "!includeSong"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Unlike Song",
+      "triggers": [
+        "!unlike"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Voteskip",
+      "triggers": [
+        "!voteskip"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SPOTIFY & SB",
+      "name": "[SPOTIFY & SB] Wrong Song",
+      "triggers": [
+        "!wrongsong"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SUBATHON",
+      "name": "[SUBATHON] Add Event",
+      "triggers": [
+        "!subathonAddEvent",
+        "!subathonEventAdd"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SUBATHON",
+      "name": "[SUBATHON] Add Time",
+      "triggers": [
+        "!subathonAddTime",
+        "!subathonTimeAdd"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SUBATHON",
+      "name": "[SUBATHON] Contribute Loyalty Points",
+      "triggers": [
+        "!subathonContributePoints"
+      ],
+      "mod": false
+    },
+    {
+      "group": "SUBATHON",
+      "name": "[SUBATHON] End Happy Hour",
+      "triggers": [
+        "!subathonEndHappyHour"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SUBATHON",
+      "name": "[SUBATHON] Pause Subathon",
+      "triggers": [
+        "!subathonPause",
+        "!pauseSubathon"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SUBATHON",
+      "name": "[SUBATHON] Remove Event",
+      "triggers": [
+        "!subathonRemoveEvent",
+        "!subathonEventRemove"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SUBATHON",
+      "name": "[SUBATHON] Remove Time",
+      "triggers": [
+        "!subathonRemoveTime",
+        "!subathonTimeRemove"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SUBATHON",
+      "name": "[SUBATHON] Start Happy Hour",
+      "triggers": [
+        "!subathonStartHappyHour"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SUBATHON",
+      "name": "[SUBATHON] Start Subathon",
+      "triggers": [
+        "!subathonStart",
+        "!startSubathon"
+      ],
+      "mod": true
+    },
+    {
+      "group": "SUBATHON",
+      "name": "[SUBATHON] Unpause Subathon",
+      "triggers": [
+        "!subathonUnpause",
+        "!subathonContinue",
+        "!unpauseSubathon",
+        "!continueSubathon"
+      ],
+      "mod": true
+    },
+    {
+      "group": "WATCHTIME",
+      "name": "[WATCHTIME] Get Watchtime",
+      "triggers": [
+        "!watchtime",
+        "!wt"
+      ],
+      "mod": false
+    },
+    {
+      "group": "WATCHTIME",
+      "name": "[WATCHTIME] Leaderboard",
+      "triggers": [
+        "!watchtimeLeaderboard",
+        "!wtLeaderboard",
+        "!leaderboardWatchtime",
+        "!leaderboardWt"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] AccountAge",
+      "triggers": [
+        "!age",
+        "!accountage",
+        "!accage"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Adblock",
+      "triggers": [
+        "!adblock"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Adblockoff",
+      "triggers": [
+        "!adblockoff"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Bits",
+      "triggers": [
+        "!bits",
+        "!cheer",
+        "!cheers"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Bluesky",
+      "triggers": [
+        "!bluesky",
+        "!bsky"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] ChannelAge",
+      "triggers": [
+        "!channelage",
+        "!kanalalter"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Clip erstellen",
+      "triggers": [
+        "!clip"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Commands",
+      "triggers": [
+        "!commands"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Discord Link",
+      "triggers": [
+        "!dc",
+        "!discord"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Emotelist",
+      "triggers": [
+        "!emotes"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Fail (Counter)",
+      "triggers": [
+        "!fail",
+        "!fail+"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] FollowAge",
+      "triggers": [
+        "!followage",
+        "!howlong",
+        "!fd",
+        "!followdate"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Follower (Anzahl)",
+      "triggers": [
+        "!follower",
+        "!followcount"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Hug",
+      "triggers": [
+        "!hug"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Instagram Link",
+      "triggers": [
+        "!insta",
+        "!instagram"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Jumpscares",
+      "triggers": [
+        "!jumpscares",
+        "!erschrenken",
+        "!buh"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Kategorie",
+      "triggers": [
+        "!setgame",
+        "!game",
+        "!kategorie",
+        "!setkategorie"
+      ],
+      "mod": true
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Ko-fi Link",
+      "triggers": [
+        "!spende",
+        "!donation",
+        "!donate",
+        "!spenden",
+        "!kofi",
+        "!ko-fi",
+        "!donaten"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Lag",
+      "triggers": [
+        "!lag",
+        "!f5"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Magische Miesmuschel",
+      "triggers": [
+        "!miesmuschel"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Marker",
+      "triggers": [
+        "!marker"
+      ],
+      "mod": true
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Meta Gaming",
+      "triggers": [
+        "!meta",
+        "!meta-gaming",
+        "!metagaming"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Münzwurf",
+      "triggers": [
+        "!münze",
+        "!münzwurf",
+        "!coin",
+        "!coinflip"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Play (Counter)",
+      "triggers": [
+        "!play"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Quellen",
+      "triggers": [
+        "!quellen",
+        "!sources"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Regeln",
+      "triggers": [
+        "!rules",
+        "!regeln",
+        "!regel",
+        "!chat-regel",
+        "!chat-regeln",
+        "!chatregel",
+        "!chatrelgen"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] RP Discord",
+      "triggers": [
+        "!homestatedc",
+        "!rpdiscord"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] RP Server",
+      "triggers": [
+        "!server",
+        "!rp",
+        "!rpserver",
+        "!homestate"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] RP TS",
+      "triggers": [
+        "!ts",
+        "!rpts"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Russisch Roulette",
+      "triggers": [
+        "!russischroulette",
+        "!pulltrigger"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Socials",
+      "triggers": [
+        "!social",
+        "!socials",
+        "!socialmedia",
+        "!sozialemedien"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Socials",
+      "triggers": [
+        "!socials"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Spoiler",
+      "triggers": [
+        "!spoiler"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Stuhl (Counter)",
+      "triggers": [
+        "!stuhl"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Sub Link",
+      "triggers": [
+        "!abo",
+        "!sub",
+        "!abonnieren",
+        "!subscribe"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Subcount",
+      "triggers": [
+        "!subcount",
+        "!abos",
+        "!subs"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Szenen",
+      "triggers": [
+        "!szenen",
+        "!scenes"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] TikTok Link",
+      "triggers": [
+        "!tiktok",
+        "!tt"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Tisch (Counter)",
+      "triggers": [
+        "!tisch"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Title",
+      "triggers": [
+        "!title",
+        "!settitle"
+      ],
+      "mod": true
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Twitch Link",
+      "triggers": [
+        "!twitch"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Twitch Prime",
+      "triggers": [
+        "!prime",
+        "!twitchprime"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Twitter Link",
+      "triggers": [
+        "!twitter",
+        "!x"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Uptime",
+      "triggers": [
+        "!uptime"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Vanish",
+      "triggers": [
+        "!v",
+        "!vanish"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Viewer Count",
+      "triggers": [
+        "!viewer",
+        "!zuschauer",
+        "!viewcount",
+        "!viewercount"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] Website",
+      "triggers": [
+        "!website",
+        "!seite",
+        "!widget",
+        "!widgets",
+        "!termin",
+        "!termine",
+        "!support"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] YouTube",
+      "triggers": [
+        "!youtube",
+        "!yt"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[CHAT] Chat Commands",
+      "name": "[CHAT] YouTube Video",
+      "triggers": [
+        "!letztesyt",
+        "!letztesvideo",
+        "!letztesytvideo",
+        "!youtubevideo",
+        "!ytvideo",
+        "!video"
+      ],
+      "mod": false
+    },
+    {
+      "group": "[MO] Mod Only",
+      "name": "[Mod] DailySubCounterInput",
+      "triggers": [
+        "!daily"
+      ],
+      "mod": true
+    },
+    {
+      "group": "[MO] Mod Only",
+      "name": "[Mod] Pokemon Guesser Start",
+      "triggers": [
+        "!pokemon"
+      ],
+      "mod": true
+    },
+    {
+      "group": "[MO] Mod Only",
+      "name": "[Mod] Stream Marker",
+      "triggers": [
+        "!marker"
+      ],
+      "mod": true
+    },
+    {
+      "group": "[MO] Mod Only",
+      "name": "[Mod] TTS",
+      "triggers": [
+        "!say"
+      ],
+      "mod": true
+    }
+  ]
+}

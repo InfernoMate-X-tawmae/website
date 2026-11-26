@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T02:27:15+01:00",
+  "updatedAt": "2026-11-26T01:18:05+01:00",
   "roulette": {
     "rounds": 19,
     "wagered": 505909,
@@ -19,12 +19,6 @@
       34
     ],
     "top": [
-      {
-        "login": "infernomate",
-        "name": "InfernoMate",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/94be7ff6-8069-40ba-92c2-caf48fa9da76-profile_image-300x300.png",
-        "value": 117037
-      },
       {
         "login": "red_deevil",
         "name": "red_deevil",
@@ -58,23 +52,17 @@
     ]
   },
   "blackjack": {
-    "hands": 27,
-    "won": 10,
-    "blackjacks": 1,
-    "wagered": 641002,
-    "paidOut": 623500,
+    "hands": 19,
+    "won": 6,
+    "blackjacks": 0,
+    "wagered": 231002,
+    "paidOut": 209000,
     "top": [
       {
         "login": "vollkrasses",
         "name": "vollkrasses",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
         "value": 100000
-      },
-      {
-        "login": "infernomate",
-        "name": "InfernoMate",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/94be7ff6-8069-40ba-92c2-caf48fa9da76-profile_image-300x300.png",
-        "value": 4500
       },
       {
         "login": "phoebe_coma",
@@ -97,9 +85,9 @@
     ]
   },
   "poker": {
-    "hands": 17,
+    "hands": 14,
     "won": 9,
-    "wagered": 257879,
+    "wagered": 202879,
     "paidOut": 190000,
     "top": [
       {
@@ -125,12 +113,6 @@
         "name": "Damagebutter",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
         "value": -39000
-      },
-      {
-        "login": "infernomate",
-        "name": "InfernoMate",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/94be7ff6-8069-40ba-92c2-caf48fa9da76-profile_image-300x300.png",
-        "value": -55000
       }
     ]
   }

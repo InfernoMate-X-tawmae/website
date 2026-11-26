@@ -3,14 +3,15 @@ import PlayingCard from './PlayingCard.astro';
 import PokerChip from './PokerChip.astro';
 import MiniBoard from './MiniBoard.astro';
 import { fmt, fmtCompact, fmtNet, pct } from '../lib/format';
-import type { CasinoData, TopRow } from '../data/types';
+import type { CasinoData, CommunityData, TopRow } from '../data/types';
 
 interface Props {
   casino: CasinoData;
+  slots: CommunityData['slots'];
   pointsName: string;
 }
 
-const { casino, pointsName } = Astro.props;
+const { casino, slots, pointsName } = Astro.props;
 const { roulette, blackjack, poker } = casino;
 
 const RED = new Set([1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]);
@@ -25,7 +26,7 @@ const tables: {
   countLabel: string;
   rows: [string, string][];
   top: TopRow[];
-  artifact: 'roulette' | 'blackjack' | 'poker';
+  artifact: 'roulette' | 'blackjack' | 'poker' | 'slots';
 }[] = [
   {
     name: 'Roulette',
@@ -64,6 +65,19 @@ const tables: {
     top: poker.top,
     artifact: 'poker',
   },
+  {
+    name: 'Slot Machine',
+    command: '!slots',
+    count: slots.spins,
+    countLabel: 'Spins',
+    rows: [
+      ['Gewonnen', `${pct(slots.wins, slots.spins)} % der Spins`],
+      ['Eingesetzt', wagered(slots.wagered)],
+      ['Zurückgezahlt', payout(slots.paidOut, slots.wagered)],
+    ],
+    top: slots.top,
+    artifact: 'slots',
+  },
 ];
 
 const pokerWon = pct(poker.won, poker.hands);
@@ -76,11 +90,11 @@ const pokerWon = pct(poker.won, poker.hands);
       <p class="text-white/60">Alle Stats für's Casino</p>
     </div>
 
-    <div class="mt-10 grid border-t border-white/15 lg:grid-cols-3">
+    <div class="mt-10 grid grid-cols-1 border-t border-white/15 lg:grid-cols-2">
       {tables.map((t, i) => (
-        <article class:list={['flex flex-col border-white/10 py-8 lg:row-span-2 lg:grid lg:grid-rows-subgrid', i > 0 && 'border-t lg:border-l lg:border-t-0', 'lg:px-8', i === 0 && 'lg:pl-0', i === 2 && 'lg:pr-0']}>
+        <article class:list={['flex min-w-0 flex-col border-white/10 py-8 lg:row-span-2 lg:grid lg:grid-rows-subgrid', i > 0 && 'border-t', i === 1 && 'lg:border-t-0', i % 2 === 0 ? 'lg:border-r lg:pr-12' : 'lg:pl-12']}>
           <div>
-          <div class="flex items-baseline justify-between gap-4">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4">
             <h3 class="display text-4xl">{t.name}</h3>
             <code class="font-mono text-xs text-white/55">{t.command}</code>
           </div>
@@ -102,6 +116,17 @@ const pokerWon = pct(poker.won, poker.hands);
                 <p class="flex items-baseline gap-2">
                   <span class="display num text-4xl">{fmt(blackjack.blackjacks)}×</span>
                   <span class="text-sm text-white/55">Blackjack</span>
+                </p>
+              </div>
+            )}
+            {t.artifact === 'slots' && (
+              <div class="flex items-center gap-4">
+                <div class="flex gap-1" aria-hidden="true">
+                  {['7', '7', '7'].map((s) => <span class="display flex h-12 w-9 items-center justify-center rounded-[3px] bg-paper pt-1 text-3xl text-roulette-red">{s}</span>)}
+                </div>
+                <p class="flex flex-wrap items-baseline gap-x-2">
+                  <span class="display num text-4xl">{fmt(slots.biggestWin)}</span>
+                  <span class="text-sm text-white/55">höchster Gewinn</span>
                 </p>
               </div>
             )}

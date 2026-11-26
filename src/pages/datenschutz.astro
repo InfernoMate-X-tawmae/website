@@ -1,0 +1,200 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+---
+
+<Base title="Datenschutz · InfernoMate" description="Datenschutzerklärung für stats.infernomate.de.">
+  <Header />
+  <main class="mx-auto max-w-[76rem] px-4 pb-24 pt-10 sm:px-6 sm:pt-16">
+    <div class="border-b border-white/15 pb-10">
+      <h1 class="display text-6xl [overflow-wrap:anywhere] sm:text-8xl">Datenschutz</h1>
+      <p class="mt-3 text-white/60">Für stats.infernomate.de, Stand November 2026</p>
+    </div>
+
+    <div class="legal mt-10 max-w-[68ch]">
+      <p>
+        Diese Erklärung gilt nur für stats.infernomate.de. Für den Shop unter infernomate.de gilt die{' '}
+        <a href="https://infernomate.de/privacy-policy">Datenschutzerklärung des Shops</a>.
+      </p>
+
+      <h2>Verantwortlich</h2>
+      <p>
+        InfernoMate Media, Inh. Dominik Moews<br />
+        c/o IP-Management #8682<br />
+        Ludwig-Erhard-Straße 18, 20459 Hamburg<br />
+        E-Mail: <a href="mailto:kontakt@infernomate.de">kontakt@infernomate.de</a>
+      </p>
+      <p>Weitere Angaben stehen im <a href={site.imprint}>Impressum</a>.</p>
+
+      <h2>Kurz gesagt</h2>
+      <ul>
+        <li>Keine eigenen Cookies, keine Werbung, kein Tracking, keine Analyse-Tools.</li>
+        <li>Kein Konto und keine Formulare. Die Suche läuft nur in deinem Browser.</li>
+        <li>Schriften und Symbole liegen auf dieser Seite und werden nicht von Dritten geladen.</li>
+        <li>Die Seite wird über GitHub und Cloudflare ausgeliefert.</li>
+        <li>Profilbilder kommen von Twitch. Den Livestream lädt die Seite erst, wenn du zustimmst.</li>
+        <li>Die Ranglisten zeigen Daten von Leuten aus dem Chat. Wenn du nicht auftauchen möchtest, reicht eine E-Mail.</li>
+      </ul>
+
+      <h2>Hosting bei GitHub Pages</h2>
+      <p>
+        Die Seite liegt bei GitHub Pages. Anbieter sind GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA, und
+        GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, Niederlande. Beim Aufruf speichert GitHub nach eigenen Angaben deine
+        IP-Adresse aus Sicherheitsgründen. Wie lange, gibt GitHub dazu nicht an. Ich selbst bekomme keinen Zugriff auf diese Protokolle.
+      </p>
+      <p>
+        Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse ist, die Seite sicher und zuverlässig bereitzustellen.
+        Dabei können Daten in die USA übertragen werden. GitHub nimmt nach eigenen Angaben am EU-US Data Privacy Framework teil und nutzt
+        EU-Standardvertragsklauseln. Mehr dazu in der{' '}
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">Datenschutzerklärung von GitHub</a>.
+      </p>
+
+      <h2>Auslieferung über Cloudflare</h2>
+      <p>
+        Vor GitHub Pages ist Cloudflare geschaltet, Anbieter ist Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA. Alle
+        Aufrufe laufen darüber und werden von dort an GitHub weitergeleitet. Cloudflare verarbeitet dabei deine IP-Adresse und technische
+        Angaben zum Aufruf, um die Seite schnell auszuliefern und vor Angriffen zu schützen. Dafür kann Cloudflare technisch notwendige
+        Cookies setzen, etwa wenn ein Aufruf als möglicher Angriff geprüft wird.
+      </p>
+      <p>
+        Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO, für notwendige Cookies § 25 Abs. 2 Nr. 2 TDDDG. Mein berechtigtes Interesse ist,
+        die Seite sicher und schnell bereitzustellen. Cloudflare arbeitet dafür als Auftragsverarbeiter. Dabei können Daten in die USA
+        übertragen werden. Cloudflare nimmt nach eigenen Angaben am EU-US Data Privacy Framework teil und nutzt EU-Standardvertragsklauseln.
+        Mehr dazu in der <a href="https://www.cloudflare.com/de-de/privacypolicy/" rel="noopener">Datenschutzerklärung von Cloudflare</a>.
+      </p>
+
+      <h2>Profilbilder von Twitch</h2>
+      <p>
+        Die Profilbilder lädt dein Browser direkt von Servern von Twitch (static-cdn.jtvnw.net). Twitch erhält dabei deine IP-Adresse und
+        technische Angaben wie Browser und Uhrzeit. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse ist die
+        Darstellung der Ranglisten mit den aktuellen Profilbildern.
+      </p>
+
+      <h2 id="livestream">Livestream von Twitch</h2>
+      <p>
+        Läuft der Stream, kannst du ihn auf der Startseite ansehen, wenn du zustimmst. Anbieter ist Twitch Interactive, Inc., 350 Bush
+        Street, 2nd Floor, San Francisco, CA 94104, USA.
+      </p>
+      <p>
+        Um zu prüfen, ob der Stream läuft, fragt dein Browser beim Aufruf der Startseite und danach alle zwei Minuten beim Bildserver von
+        Twitch (static-cdn.jtvnw.net) an, ob es ein Vorschaubild gibt. Das ist derselbe Server, von dem die Profilbilder kommen. Dabei
+        werden deine IP-Adresse und technische Angaben wie der Browser übertragen, aber keine Cookies gesendet oder gesetzt und nichts auf
+        deinem Gerät gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse ist, den Stream nur dann
+        anzubieten, wenn er läuft.
+      </p>
+      <p>
+        Den Player lädt dein Browser erst, wenn du auf „Cookies akzeptieren und Stream ansehen“ klickst. Dann erhält Twitch deine
+        IP-Adresse und technische Angaben, kann Cookies und ähnliche Speicher nutzen und den Besuch deinem Twitch-Konto zuordnen, wenn du dort angemeldet bist. Twitch verarbeitet diese Daten in eigener Verantwortung, auch für
+        eigene Zwecke wie Auswertung und Werbung.
+      </p>
+      <p>
+        Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Sie umfasst auch die
+        Übermittlung in die USA (Art. 49 Abs. 1 lit. a DSGVO). Dort gilt nicht automatisch ein Datenschutz wie in der EU. Behörden können
+        unter Umständen auf Daten zugreifen, und deine Rechte sind schwerer durchzusetzen.
+      </p>
+      <p>
+        Die Einwilligung gilt nur bis zum nächsten Laden der Seite und wird nicht gespeichert. Du kannst sie jederzeit für die Zukunft
+        widerrufen, indem du die Seite neu lädst oder verlässt. Bereits gesetzte Cookies löschst du in den Einstellungen deines Browsers.
+        Ohne Klick kannst du die Seite uneingeschränkt nutzen. Mehr dazu in der{' '}
+        <a href="https://legal.twitch.com/legal/privacy-notice/" rel="noopener">Datenschutzerklärung von Twitch</a> und im{' '}
+        <a href="https://legal.twitch.com/legal/cookie-notice/" rel="noopener">Cookie-Hinweis von Twitch</a>.
+      </p>
+
+      <h2>Speicher in deinem Browser</h2>
+      <p>
+        Wenn du auf der Commands-Seite den Schalter „Mod-Commands“ benutzt, merkt sich dein Browser die Einstellung im Local Storage
+        (Eintrag „mod-commands“). Sie wird nicht übertragen, und du kannst sie jederzeit in deinem Browser löschen. Grundlage ist
+        § 25 Abs. 2 Nr. 2 TDDDG, weil du diese Funktion selbst anforderst.
+      </p>
+
+      <h2>Ranglisten und Statistiken</h2>
+      <p>Wer im Stream von InfernoMate auf Twitch oder YouTube mitmacht, kann auf dieser Seite auftauchen. Veröffentlicht werden:</p>
+      <ul>
+        <li>Anzeigename, Login, Nutzer-ID, Plattform und bei Plätzen in den Ranglisten das Profilbild</li>
+        <li>Punktestand, Platzierungen sowie verdiente, verschenkte und erhaltene Punkte</li>
+        <li>Ergebnisse aus Chat-Spielen, Quiz, Casino und Slot Machine. Es geht dabei nur um Punkte, nicht um Geld.</li>
+        <li>Watchtime, Lurks und Anzahl der Song Requests, wenn du damit in einer Rangliste stehst</li>
+        <li>Sub-Monate, Sub-Stufe, verschenkte Subs, Bits und das Datum, seit dem du folgst</li>
+      </ul>
+      <p>
+        Die Daten entstehen, wenn du im Chat mitmachst, zuschaust oder den Kanal unterstützt. Sie stammen aus der Software Streamer.bot, die
+        für den Stream läuft, und aus der Schnittstelle von Twitch. Veröffentlicht werden sie über ein öffentliches Verzeichnis (Repository)
+        bei GitHub.
+      </p>
+      <p>
+        Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse ist, der Community ihre gemeinsamen Spielstände und
+        Ranglisten zu zeigen. Eine automatisierte Entscheidungsfindung oder ein Profiling im Sinne von Art. 22 DSGVO findet nicht statt.
+      </p>
+      <p>
+        Die Daten werden regelmäßig durch einen neuen Stand ersetzt, meist nach einem Stream. Sie bleiben veröffentlicht, solange die
+        Statistik läuft oder bis du widersprichst. Ältere Stände bleiben im Versionsverlauf des Repositorys bei GitHub gespeichert. Wenn du
+        eine Löschung verlangst, beziehe ich diesen Verlauf mit ein.
+      </p>
+
+      <h2>Nicht auftauchen: dein Widerspruch</h2>
+      <p>
+        <strong>
+          Du kannst der Veröffentlichung deiner Daten jederzeit aus Gründen widersprechen, die sich aus deiner besonderen Situation ergeben
+          (Art. 21 DSGVO).
+        </strong>{' '}
+        Schreib dafür an <a href="mailto:kontakt@infernomate.de">kontakt@infernomate.de</a> und nenne deinen Twitch- oder YouTube-Namen.
+        Eine kurze Nachricht reicht. Ich nehme dich dann in eine nicht öffentliche Ausschlussliste auf, damit du ab der nächsten
+        Aktualisierung nicht mehr erscheinst. Dort speichere ich nur deinen Namen oder deine Nutzer-ID, solange die Statistik läuft
+        (Art. 6 Abs. 1 lit. c und f DSGVO).
+      </p>
+
+      <h2>E-Mail</h2>
+      <p>
+        Wenn du mir schreibst, verarbeite ich deine Angaben, um dir zu antworten (Art. 6 Abs. 1 lit. f DSGVO, bei Anfragen zu deinen Rechten
+        Art. 6 Abs. 1 lit. c DSGVO). Ich lösche sie, sobald sie dafür nicht mehr nötig sind und keine gesetzliche Pflicht zur Aufbewahrung
+        besteht.
+      </p>
+
+      <h2>Links</h2>
+      <p>
+        Links zu Twitch, Discord, YouTube und anderen Plattformen sind normale Links. Daten gehen erst dorthin, wenn du sie anklickst.
+      </p>
+
+      <h2>Deine Rechte</h2>
+      <p>
+        Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung
+        (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Eine Einwilligung kannst du jederzeit für die Zukunft
+        widerrufen (Art. 7 Abs. 3). Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde
+        beschweren (Art. 77), zum Beispiel an deinem Wohnort. Du bist nicht verpflichtet, mir Daten bereitzustellen.
+      </p>
+    </div>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .legal {
+    line-height: 1.7;
+    color: rgb(255 255 255 / 0.8);
+  }
+  .legal h2 {
+    margin-top: 2.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-paper);
+  }
+  .legal p,
+  .legal ul {
+    margin-top: 0.75rem;
+  }
+  .legal ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+  .legal li {
+    margin-top: 0.35rem;
+  }
+  .legal a {
+    color: var(--color-ember-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+  }
+</style>

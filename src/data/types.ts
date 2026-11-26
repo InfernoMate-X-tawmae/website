@@ -78,3 +78,30 @@ export interface TwitchData {
   bits: { topTotal: number; top: TopRow[] };
   followers: { total: number; lastWeek: number; top: TopRow[] };
 }
+
+export interface CommandEntry {
+  group: string;
+  name: string;
+  triggers: string[];
+  mod: boolean;
+}
+
+export interface CommandsData {
+  updatedAt: string;
+  commands: CommandEntry[];
+}
+
+export interface SongRow {
+  name: string;
+  artists: string;
+  value: number;
+}
+
+export interface CommunityData {
+  updatedAt: string;
+  watchtime: { seconds: number; viewers: number; top: TopRow[] };
+  lurks: { count: number; seconds: number; lurkers: number; top: TopRow[] };
+  slots: { spins: number; wins: number; wagered: number; paidOut: number; biggestWin: number; top: TopRow[] };
+  quiz: { games: number; rounds: number; solved: number; correct: number; top: TopRow[] };
+  songs: { requests: number; requesters: number; different: number; top: TopRow[]; topSongs: SongRow[] };
+}

@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { CasinoData, GamesData, LoyaltyData, PlayerIndexEntry, TwitchData } from '../data/types';
+import type { CasinoData, CommandsData, CommunityData, GamesData, LoyaltyData, PlayerIndexEntry, TwitchData } from '../data/types';
 
 const dir = join(process.cwd(), 'public', 'data');
 
@@ -26,6 +26,15 @@ const empty = {
     bits: { topTotal: 0, top: [] },
     followers: { total: 0, lastWeek: 0, top: [] },
   } satisfies TwitchData,
+  'commands.json': { updatedAt: '', commands: [] } satisfies CommandsData,
+  'community.json': {
+    updatedAt: '',
+    watchtime: { seconds: 0, viewers: 0, top: [] },
+    lurks: { count: 0, seconds: 0, lurkers: 0, top: [] },
+    slots: { spins: 0, wins: 0, wagered: 0, paidOut: 0, biggestWin: 0, top: [] },
+    quiz: { games: 0, rounds: 0, solved: 0, correct: 0, top: [] },
+    songs: { requests: 0, requesters: 0, different: 0, top: [], topSongs: [] },
+  } satisfies CommunityData,
   'players/index.json': { updatedAt: '', players: [] as PlayerIndexEntry[] },
 };
 

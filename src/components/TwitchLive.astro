@@ -1,0 +1,71 @@
+---
+import Play from '~icons/lucide/play';
+import Twitch from '~icons/simple-icons/twitch';
+import { site } from '../data/site';
+
+const channel = site.twitch.split('/').pop();
+---
+
+<section id="live" class="mx-auto mt-10 max-w-[76rem] px-4 sm:px-6" aria-label="Livestream" data-channel={channel} hidden>
+  <div class="flex flex-col gap-5 rounded-md border border-white/10 bg-raised p-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:p-6">
+    <div>
+      <p class="flex items-center gap-2 font-bold"><Twitch class="size-4" aria-hidden="true" /> Gerade live</p>
+      <p class="mt-1.5 max-w-[62ch] text-sm text-white/60">
+        Zum Ansehen brauche ich deine Zustimmung: Der Player kommt von Twitch. Dabei gehen Daten wie deine IP-Adresse an Twitch in den USA,
+        und Twitch kann Cookies setzen. Mehr dazu im <a href={`${site.privacy}#livestream`} class="underline underline-offset-2 transition-colors hover:text-paper">Datenschutz</a>.
+      </p>
+    </div>
+    <button id="live-load" type="button" class="inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-md bg-ember px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-ember-light">
+      <Play class="size-4" aria-hidden="true" /> Cookies akzeptieren und Stream ansehen
+    </button>
+  </div>
+</section>
+
+<script>
+  const section = document.getElementById('live')!;
+  const notice = section.firstElementChild!;
+  const { channel } = section.dataset;
+  let offlineChecks = 0;
+
+  // Live-Check ohne Cookies: Für einen laufenden Stream liefert Twitchs Bildserver ein Vorschaubild, sonst eine Weiterleitung.
+  // "omit" verhindert, dass dabei Cookies gesendet oder gesetzt werden.
+  async function checkLive() {
+    if (document.hidden) return;
+    try {
+      const response = await fetch(`https://static-cdn.jtvnw.net/previews-ttv/live_user_${channel}-80x45.jpg?${Date.now()}`, {
+        method: 'HEAD',
+        redirect: 'manual',
+        credentials: 'omit',
+        referrerPolicy: 'no-referrer',
+        cache: 'no-store',
+      });
+      if (response.ok) {
+        offlineChecks = 0;
+        section.hidden = false;
+      } else if (response.type === 'opaqueredirect') {
+        offlineChecks++;
+        // Läuft der Player schon, erst nach zwei Checks ausblenden
+        if (section.querySelector('iframe') && offlineChecks < 2) return;
+        section.replaceChildren(notice);
+        section.hidden = true;
+      }
+    } catch {
+      // Nicht erreichbar: Stand so lassen, zu Beginn also ausgeblendet
+    }
+  }
+
+  // Erst die Zustimmung lädt den Player von Twitch
+  document.getElementById('live-load')!.addEventListener('click', () => {
+    const player = document.createElement('iframe');
+    player.src = `https://player.twitch.tv/?${new URLSearchParams({ channel: channel!, parent: location.hostname, autoplay: 'true' })}`;
+    player.title = 'Livestream auf Twitch';
+    player.allow = 'autoplay; fullscreen';
+    player.className = 'aspect-video min-h-[300px] w-full rounded-md bg-black';
+    section.replaceChildren(player);
+    player.focus();
+  });
+
+  void checkLive();
+  setInterval(checkLive, 120000);
+  document.addEventListener('visibilitychange', checkLive);
+</script>

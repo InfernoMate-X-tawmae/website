@@ -83,7 +83,7 @@ const panels: {
       <p class="flex items-center gap-2 text-white/60"><Twitch class="size-4" aria-hidden="true" /> Subs, Gifts, Bits und Follower</p>
     </div>
 
-    <div class="mt-10 grid border-t border-white/15 lg:grid-cols-2">
+    <div class="mt-10 grid grid-cols-1 border-t border-white/15 lg:grid-cols-2">
       {panels.map((g, i) => (
         <article class:list={['flex flex-col border-white/10 py-9 lg:row-span-2 lg:grid lg:grid-rows-subgrid', i > 0 && 'border-t', i === 1 && 'lg:border-t-0', i % 2 === 0 ? 'lg:border-r lg:pr-12' : 'lg:pl-12']}>
           <div>

@@ -39,10 +39,10 @@ const listed = socials.filter((s) => s.id !== 'twitch' && s.id !== 'discord');
           <Discord class="size-4" aria-hidden="true" /> Discord
         </a>
       </div>
-      <ul class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold" aria-label="Weitere Socials">
+      <ul class="mt-5 flex flex-wrap gap-x-5 text-sm font-semibold" aria-label="Weitere Socials">
         {listed.map((s) => (
           <li>
-            <a href={s.href} rel="noopener" class="inline-flex items-center gap-1.5 text-white/60 transition-colors hover:text-paper">
+            <a href={s.href} rel="noopener" class="inline-flex items-center gap-1.5 py-1.5 text-white/60 transition-colors hover:text-paper">
               <SocialIcon id={s.id} class="size-3.5" /> {s.label}
             </a>
           </li>

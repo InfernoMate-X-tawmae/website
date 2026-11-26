@@ -117,17 +117,17 @@ const top = players.filter((p) => p.rank !== null).sort((a, b) => a.rank! - b.ra
       : '';
 
     root.innerHTML = `
-      <section class="reveal mt-12 grid gap-10 border-b border-white/15 pb-12 lg:grid-cols-12 lg:gap-12" aria-labelledby="player-name">
+      <section class="reveal mt-12 grid grid-cols-1 gap-10 border-b border-white/15 pb-12 lg:grid-cols-12 lg:gap-12" aria-labelledby="player-name">
         <div class="flex items-center gap-5 sm:gap-7 lg:col-span-7">
           ${avatar(p, 'size-24 shrink-0 ring-[3px] ring-ember sm:size-32 text-4xl')}
           <div class="min-w-0">
-            <h2 id="player-name" class="display truncate text-6xl sm:text-8xl">${esc(p.name)}</h2>
+            <h2 id="player-name" class="display text-[clamp(2.25rem,11vw,3.75rem)] [overflow-wrap:anywhere] sm:truncate sm:text-8xl">${esc(p.name)}</h2>
             <p class="mt-2 text-white/60">${p.platform === 'youtube' ? 'YouTube' : 'Twitch'} · ${p.rank ? `Platz ${fmt(p.rank)}` : 'Nicht in den Top 100'}</p>
           </div>
         </div>
         <div class="lg:col-span-5 lg:border-l lg:border-white/10 lg:pl-12">
           <p class="text-sm text-white/55">Kontostand</p>
-          <p class="mt-1 flex items-baseline gap-2.5"><span class="display num text-7xl">${fmt(p.points)}</span><span class="text-white/55">${esc(P)}</span></p>
+          <p class="mt-1 flex flex-wrap items-baseline gap-x-2.5"><span class="display num text-7xl">${fmt(p.points)}</span><span class="text-white/55">${esc(P)}</span></p>
           ${rows([
             ['Diese Woche verdient', ranged(p.week)],
             ['Diesen Monat verdient', ranged(p.month)],
@@ -156,7 +156,7 @@ const top = players.filter((p) => p.rank !== null).sort((a, b) => a.rank! - b.ra
 
       <section class="reveal mt-12" style="--i:3" aria-labelledby="p-casino">
         <h3 id="p-casino" class="display text-5xl">Casino</h3>
-        <div class="mt-6 grid border-t border-white/15 lg:grid-cols-3">${casino}</div>
+        <div class="mt-6 grid grid-cols-1 border-t border-white/15 lg:grid-cols-3">${casino}</div>
       </section>
       ${twitch ? `
       <section class="reveal mt-12" style="--i:4" aria-labelledby="p-twitch">

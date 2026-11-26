@@ -1,14 +1,15 @@
 ---
 import MiniBoard from './MiniBoard.astro';
 import { fmt, fmtCompact, fmtNet, pct } from '../lib/format';
-import type { GamesData, TopRow } from '../data/types';
+import type { CommunityData, GamesData, TopRow } from '../data/types';
 
 interface Props {
   games: GamesData;
+  quiz: CommunityData['quiz'];
   pointsName: string;
 }
 
-const { games, pointsName: p } = Astro.props;
+const { games, quiz, pointsName: p } = Astro.props;
 const { gamble, duels, rumble, scratchCards: scratch } = games;
 const avg = (a: number, b: number, digits = 0) =>
   new Intl.NumberFormat('de-DE', { maximumFractionDigits: digits }).format(b > 0 ? a / b : 0);
@@ -82,20 +83,34 @@ const panels: {
     top: scratch.top,
     topValue: (v) => fmt(v),
   },
+  {
+    name: 'Movie & Show Quiz',
+    command: '!quiz',
+    count: quiz.rounds,
+    countLabel: 'Runden',
+    split: { left: 'gelöst', right: 'nicht gelöst', leftPct: pct(quiz.solved, quiz.rounds) },
+    rows: [
+      ['Gespielte Quizze', fmt(quiz.games)],
+      ['Richtig geraten', fmt(quiz.correct)],
+    ],
+    topLabel: 'Meiste Treffer',
+    top: quiz.top,
+    topValue: (v) => `${fmt(v)} Treffer`,
+  },
 ];
 ---
 
 <section class="mx-auto max-w-[76rem] px-4 py-20 sm:px-6 sm:py-28" aria-labelledby="chat-spiele">
   <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
     <h2 id="chat-spiele" class="display text-6xl sm:text-7xl">Chat-Spiele</h2>
-    <p class="text-white/60">LOYALTY POINTS Chat Games</p>
+    <p class="text-white/60">LOYALTY POINTS Chat Games und Quiz</p>
   </div>
 
-  <div class="mt-10 grid border-t border-white/15 lg:grid-cols-2">
+  <div class="mt-10 grid grid-cols-1 border-t border-white/15 lg:grid-cols-2">
     {panels.map((g, i) => (
       <article class:list={['flex flex-col border-white/10 py-9 lg:row-span-2 lg:grid lg:grid-rows-subgrid', i > 0 && 'border-t', i === 1 && 'lg:border-t-0', i % 2 === 0 ? 'lg:border-r lg:pr-12' : 'lg:pl-12']}>
         <div>
-        <div class="flex items-baseline justify-between gap-4">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4">
           <h3 class="display text-5xl">{g.name}</h3>
           <code class="font-mono text-xs text-white/55">{g.command}</code>
         </div>
@@ -132,5 +147,6 @@ const panels: {
         </div>
       </article>
     ))}
+    {panels.length % 2 === 1 && <div class="hidden border-t border-white/10 lg:row-span-2 lg:block" aria-hidden="true"></div>}
   </div>
 </section>

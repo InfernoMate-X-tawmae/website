@@ -12,6 +12,11 @@ export const fmtStamp = (iso: string) => (iso ? `${stamp.format(new Date(iso))} 
 export const fmtNet = (n: number) => (n > 0 ? `+${whole.format(n)}` : n < 0 ? `−${whole.format(-n)}` : '0');
 export const pct = (part: number, total: number) => (total > 0 ? Math.round((part / total) * 100) : 0);
 
+export function fmtTime(seconds: number) {
+  if (seconds >= 3600) return `${whole.format(Math.floor(seconds / 3600))} Std.`;
+  return seconds >= 60 ? `${Math.floor(seconds / 60)} Min.` : `${seconds} Sek.`;
+}
+ 
 export function url(path = '') {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   return `${base}/${path.replace(/^\//, '')}`;

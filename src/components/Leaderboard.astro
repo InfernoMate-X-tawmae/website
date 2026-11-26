@@ -71,7 +71,7 @@ const tabs: { key: keyof LoyaltyData['leaderboards']; label: string; caption: st
             <li class="grid grid-cols-[2.25rem_2.25rem_minmax(0,1fr)_auto] items-center gap-x-3 border-b border-white/10 py-2.5 sm:grid-cols-[3rem_2.25rem_minmax(0,13rem)_minmax(0,1fr)_auto] sm:gap-x-5">
               <span class="display num text-2xl text-white/40">{r.rank}</span>
               <Avatar src={r.avatar} name={r.name} size={36} class="size-9 text-sm" />
-              <a href={url(`spieler/?name=${encodeURIComponent(r.login)}`)} class="truncate font-semibold transition-colors hover:text-ember-light">{r.name}</a>
+              <a href={url(`spieler/?name=${encodeURIComponent(r.login)}`)} class="truncate py-1.5 font-semibold transition-colors hover:text-ember-light">{r.name}</a>
               <span class="hidden h-2 bg-white/[0.06] sm:block" aria-hidden="true">
                 <span class="bar block h-full bg-ember" style={`width:${Math.max(3, (r.points / max) * 100)}%;--i:${j}`}></span>
               </span>

@@ -25,11 +25,11 @@ const nav = [
     </a>
     <nav class="hidden min-w-0 gap-5 text-sm font-semibold text-white/60 lg:flex xl:gap-7" aria-label="Hauptmenü">
       {nav.map((item) => <a href={item.href} class="shrink-0 py-1 transition-colors hover:text-paper">{item.label}</a>)}
-      <a href={site.shop} rel="noopener" class="inline-flex shrink-0 items-center gap-0.5 py-1 transition-colors hover:text-paper">
+      <a href={site.shop} target="_blank" rel="noopener" class="inline-flex shrink-0 items-center gap-0.5 py-1 transition-colors hover:text-paper">
         Shop <ArrowUpRight class="size-3.5" aria-hidden="true" />
       </a>
     </nav>
-    <a href={site.twitch} rel="noopener" class="ml-auto shrink-0 rounded-md bg-ember px-3.5 py-2 text-sm font-bold text-white transition-colors hover:bg-ember-light">
+    <a href={site.twitch} target="_blank" rel="noopener" class="ml-auto shrink-0 rounded-md bg-ember px-3.5 py-2 text-sm font-bold text-white transition-colors hover:bg-ember-light">
       Twitch
     </a>
     <button id="menu-button" type="button" aria-expanded="false" aria-controls="menu" class="group -mr-2 flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-md transition-colors hover:bg-white/5 lg:hidden">
@@ -41,7 +41,7 @@ const nav = [
 
   <nav id="menu" hidden class="absolute inset-x-0 top-full z-30 max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-b border-white/10 bg-ground px-4 pb-4 shadow-[0_16px_40px_rgba(0,0,0,0.5)] sm:px-6 lg:hidden" aria-label="Hauptmenü">
     {nav.map((item) => <a href={item.href} class="block border-b border-white/10 py-3.5 font-semibold transition-colors hover:text-ember-light">{item.label}</a>)}
-    <a href={site.shop} rel="noopener" class="flex items-center gap-1 py-3.5 font-semibold transition-colors hover:text-ember-light">
+    <a href={site.shop} target="_blank" rel="noopener" class="flex items-center gap-1 py-3.5 font-semibold transition-colors hover:text-ember-light">
       Shop <ArrowUpRight class="size-4" aria-hidden="true" />
     </a>
   </nav>

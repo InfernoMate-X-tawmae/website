@@ -32,17 +32,17 @@ const listed = socials.filter((s) => s.id !== 'twitch' && s.id !== 'discord');
         Stats, Leaderboards und mehr aus dem Stream, um zu zeigen, wer der größte Gamba-Addict ist.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
-        <a href={site.twitch} rel="noopener" class="inline-flex items-center gap-2 rounded-md bg-ember px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-ember-light">
+        <a href={site.twitch} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md bg-ember px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-ember-light">
           <Twitch class="size-4" aria-hidden="true" /> Zum Stream
         </a>
-        <a href={site.discord} rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-white/20 px-5 py-3 text-sm font-bold transition-colors hover:border-white/50">
+        <a href={site.discord} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-white/20 px-5 py-3 text-sm font-bold transition-colors hover:border-white/50">
           <Discord class="size-4" aria-hidden="true" /> Discord
         </a>
       </div>
       <ul class="mt-5 flex flex-wrap gap-x-5 text-sm font-semibold" aria-label="Weitere Socials">
         {listed.map((s) => (
           <li>
-            <a href={s.href} rel="noopener" class="inline-flex items-center gap-1.5 py-1.5 text-white/60 transition-colors hover:text-paper">
+            <a href={s.href} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 py-1.5 text-white/60 transition-colors hover:text-paper">
               <SocialIcon id={s.id} class="size-3.5" /> {s.label}
             </a>
           </li>

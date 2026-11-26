@@ -10,6 +10,7 @@ interface Props {
 
 const { community } = Astro.props;
 const { watchtime, lurks, songs } = community;
+const checkins = community.checkins ?? { count: 0, people: 0, top: [] };
 const per = (a: number, b: number) => (b > 0 ? Math.round(a / b) : 0);
 
 const panels: {
@@ -36,17 +37,17 @@ const panels: {
     topValue: fmtTime,
   },
   {
-    key: 'lurks',
-    name: 'Lurks',
-    count: fmt(lurks.count),
-    countLabel: 'Lurks',
+    key: 'checkins',
+    name: 'Check-ins',
+    count: fmt(checkins.count),
+    countLabel: 'Check-ins',
     rows: [
-      ['Lurker', fmt(lurks.lurkers)],
-      ['Gelurkt insgesamt', fmtTime(lurks.seconds)],
+      ['Leute mit Check-in', fmt(checkins.people)],
+      ['Im Schnitt pro Person', fmt(per(checkins.count, checkins.people))],
     ],
-    topLabel: 'Am längsten gelurkt',
-    top: lurks.top,
-    topValue: fmtTime,
+    topLabel: 'Meiste Check-ins',
+    top: checkins.top,
+    topValue: (v) => `${fmt(v)} ${v === 1 ? 'Check-in' : 'Check-ins'}`,
   },
   {
     key: 'songs',
@@ -74,13 +75,26 @@ const panels: {
     top: songs.topSongs.map((s) => ({ login: null, name: s.name, note: s.artists, avatar: null, value: s.value })),
     topValue: (v) => `${fmt(v)}×`,
   },
+  {
+    key: 'lurks',
+    name: 'Lurks',
+    count: fmt(lurks.count),
+    countLabel: 'Lurks',
+    rows: [
+      ['Lurker', fmt(lurks.lurkers)],
+      ['Gelurkt insgesamt', fmtTime(lurks.seconds)],
+    ],
+    topLabel: 'Am längsten gelurkt',
+    top: lurks.top,
+    topValue: fmtTime,
+  },
 ];
 ---
 
 <section class="mx-auto max-w-[76rem] px-4 py-20 sm:px-6 sm:py-28" aria-labelledby="community">
   <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
     <h2 id="community" class="display text-6xl sm:text-7xl">Community</h2>
-    <p class="text-white/60">Watchtime, Lurks und Song Requests</p>
+    <p class="text-white/60">Watchtime, Check-ins, Song Requests und Lurks</p>
   </div>
 
   <div class="mt-10 grid grid-cols-1 border-t border-white/15 lg:grid-cols-2">
@@ -109,5 +123,6 @@ const panels: {
         </div>
       </article>
     ))}
+    {panels.length % 2 === 1 && <div class="hidden border-t border-white/10 lg:row-span-2 lg:block" aria-hidden="true"></div>}
   </div>
 </section>

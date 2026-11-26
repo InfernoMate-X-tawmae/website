@@ -31,6 +31,7 @@ const empty = {
     updatedAt: '',
     watchtime: { seconds: 0, viewers: 0, top: [] },
     lurks: { count: 0, seconds: 0, lurkers: 0, top: [] },
+    checkins: { count: 0, people: 0, top: [] },
     slots: { spins: 0, wins: 0, wagered: 0, paidOut: 0, biggestWin: 0, top: [] },
     quiz: { games: 0, rounds: 0, solved: 0, correct: 0, top: [] },
     songs: { requests: 0, requesters: 0, different: 0, top: [], topSongs: [] },

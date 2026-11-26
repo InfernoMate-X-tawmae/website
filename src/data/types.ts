@@ -101,6 +101,7 @@ export interface CommunityData {
   updatedAt: string;
   watchtime: { seconds: number; viewers: number; top: TopRow[] };
   lurks: { count: number; seconds: number; lurkers: number; top: TopRow[] };
+  checkins?: { count: number; people: number; top: TopRow[] };
   slots: { spins: number; wins: number; wagered: number; paidOut: number; biggestWin: number; top: TopRow[] };
   quiz: { games: number; rounds: number; solved: number; correct: number; top: TopRow[] };
   songs: { requests: number; requesters: number; different: number; top: TopRow[]; topSongs: SongRow[] };

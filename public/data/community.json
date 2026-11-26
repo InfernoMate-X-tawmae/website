@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T01:37:16+01:00",
+  "updatedAt": "2026-11-26T02:01:39+01:00",
   "watchtime": {
     "seconds": 28920060,
     "viewers": 1903,
@@ -188,6 +188,72 @@
         "name": "xMr_Oldschoolx",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/44766294-848a-4042-ae8c-453a1fddeb3e-profile_image-300x300.png",
         "value": 1
+      }
+    ]
+  },
+  "checkins": {
+    "count": 756,
+    "people": 24,
+    "top": [
+      {
+        "login": "vollkrasses",
+        "name": "vollkrasses",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
+        "value": 128
+      },
+      {
+        "login": "lenamelody",
+        "name": "LenaMelody",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
+        "value": 120
+      },
+      {
+        "login": "red_deevil",
+        "name": "red_deevil",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
+        "value": 118
+      },
+      {
+        "login": "schlenki",
+        "name": "Schlenki",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/1c96c6da-3133-4bdb-9b11-5727ffbb81ff-profile_image-300x300.png",
+        "value": 114
+      },
+      {
+        "login": "damagebutter",
+        "name": "Damagebutter",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
+        "value": 58
+      },
+      {
+        "login": "phoebe_coma",
+        "name": "phoebe_coma",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e70a0974-3bf0-43bf-a2f5-b2c97f2e8588-profile_image-300x300.png",
+        "value": 52
+      },
+      {
+        "login": "fabyshi",
+        "name": "FabYshi",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/19d61adf-bbef-45f1-9c4c-a4f44056171b-profile_image-300x300.png",
+        "value": 49
+      },
+      {
+        "login": "pierreliusmaximus",
+        "name": "PierreliusMaximus",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/ad3126fd-fa95-411c-9b38-3b866a63a9a4-profile_image-300x300.png",
+        "value": 34
+      },
+      {
+        "login": "ganja201",
+        "name": "ganja201",
+        "avatar": "https://static-cdn.jtvnw.net/user-default-pictures-uv/ebb84563-db81-4b9c-8940-64ed33ccfc7b-profile_image-300x300.png",
+        "value": 30
+      },
+      {
+        "login": "exxentra01",
+        "name": "exxentra01",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/868eb395-ef30-4648-93bc-9550c76b4612-profile_image-300x300.png",
+        "value": 20
       }
     ]
   },

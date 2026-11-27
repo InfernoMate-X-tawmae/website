@@ -1,26 +1,26 @@
 {
-  "updatedAt": "2026-11-26T02:01:39+01:00",
+  "updatedAt": "2026-11-28T00:03:33+01:00",
   "watchtime": {
-    "seconds": 28920060,
-    "viewers": 1903,
+    "seconds": 29070060,
+    "viewers": 1907,
     "top": [
       {
         "login": "vollkrasses",
         "name": "vollkrasses",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
-        "value": 2825340
+        "value": 2844960
       },
       {
         "login": "lenamelody",
         "name": "LenaMelody",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
-        "value": 2697240
+        "value": 2715600
       },
       {
         "login": "red_deevil",
         "name": "red_deevil",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
-        "value": 1483200
+        "value": 1486440
       },
       {
         "login": "pierreliusmaximus",
@@ -29,16 +29,16 @@
         "value": 1452000
       },
       {
-        "login": "lynox97",
-        "name": "Lynox97",
-        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e97e9f6-e68f-4486-85ab-ebe6abfbcf35-profile_image-300x300.png",
-        "value": 1399920
-      },
-      {
         "login": "headman_666",
         "name": "headman_666",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/41884fb4-1f06-4dc4-9c13-b90590178ddd-profile_image-300x300.jpeg",
-        "value": 1397460
+        "value": 1413720
+      },
+      {
+        "login": "lynox97",
+        "name": "Lynox97",
+        "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e97e9f6-e68f-4486-85ab-ebe6abfbcf35-profile_image-300x300.png",
+        "value": 1410960
       },
       {
         "login": "fabyshi",
@@ -62,14 +62,14 @@
         "login": "das_wildfraeulein",
         "name": "das_wildfraeulein",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/3434f8c7-fe55-475a-b748-62f60015d644-profile_image-300x300.png",
-        "value": 592320
+        "value": 597420
       }
     ]
   },
   "lurks": {
-    "count": 36,
-    "seconds": 164226,
-    "lurkers": 17,
+    "count": 37,
+    "seconds": 164249,
+    "lurkers": 18,
     "top": [
       {
         "login": "lackshou",
@@ -192,38 +192,38 @@
     ]
   },
   "checkins": {
-    "count": 756,
+    "count": 762,
     "people": 24,
     "top": [
       {
         "login": "vollkrasses",
         "name": "vollkrasses",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
-        "value": 128
+        "value": 129
       },
       {
         "login": "lenamelody",
         "name": "LenaMelody",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4b9e311-271c-4fa7-a5c3-37af00b57089-profile_image-300x300.png",
-        "value": 120
+        "value": 121
       },
       {
         "login": "red_deevil",
         "name": "red_deevil",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/50054dfe-3f56-4df6-a27d-c7bff9c8bb7a-profile_image-300x300.png",
-        "value": 118
+        "value": 119
       },
       {
         "login": "schlenki",
         "name": "Schlenki",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/1c96c6da-3133-4bdb-9b11-5727ffbb81ff-profile_image-300x300.png",
-        "value": 114
+        "value": 115
       },
       {
         "login": "damagebutter",
         "name": "Damagebutter",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/743b7fff-1458-4131-900b-39a24d22d64d-profile_image-300x300.jpeg",
-        "value": 58
+        "value": 59
       },
       {
         "login": "phoebe_coma",
@@ -258,9 +258,9 @@
     ]
   },
   "songs": {
-    "requests": 277,
+    "requests": 280,
     "requesters": 15,
-    "different": 186,
+    "different": 187,
     "top": [
       {
         "login": "lenamelody",
@@ -284,7 +284,7 @@
         "login": "vollkrasses",
         "name": "vollkrasses",
         "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/97039414-c087-49c3-8a7a-1e9fed9aaf8d-profile_image-300x300.png",
-        "value": 23
+        "value": 26
       },
       {
         "login": "florian_live_1",
@@ -360,6 +360,11 @@
         "value": 4
       },
       {
+        "name": "IN GEWAHRSAM!",
+        "artists": "Hänno",
+        "value": 3
+      },
+      {
         "name": "Kamaz",
         "artists": "DJ Blyatman, dlb",
         "value": 3
@@ -367,11 +372,6 @@
       {
         "name": "Levan Polkka",
         "artists": "Braaheim, Den BB",
-        "value": 3
-      },
-      {
-        "name": "Party With The Cops (feat. Haley Maze)",
-        "artists": "Blasterjaxx, Neptunica, Haley Maze",
         "value": 3
       }
     ]
